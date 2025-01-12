@@ -68,7 +68,7 @@ class Scraping:
             if element_exist!=True:
                 time.sleep(2)
 
-            print(f"Se estra trabajando {one_cui} y el elemento existe {element_exist}")
+            print(f"Se esta trabajando el regtistro {one_cui} y el elemento existe {element_exist}")
             # Identificar y almacenar la información de la página     
             cui                              = r.read('//*[@id="divVistaPreliminar"]/table[1]/tbody/tr[1]/td[2]/div')
             pip                              = r.read('//*[@id="divVistaPreliminar"]/table[1]/tbody/tr[2]/td[2]/div')
