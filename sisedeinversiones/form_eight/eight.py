@@ -1,10 +1,25 @@
+"""
+*Class ScrapingEight*
+=====================
+
+"""
+
 import time
 
 import pandas as pd
 import rpa as r
 
 
-class Scraping:
+class ScrapingEight:
+    """Scraping Class Attributes
+
+    Args:
+        file_read (_type_): It is the address where the file with the CUI codes that we are going to consume is located.
+        path_export (_type_): Address where the information generated after data extraction will be exported.
+        num_range (_type_): Indicates the range of records that will be worked on, separated by a "_" between the upper and lower limits.
+        file_type (_type_): This is the type of file you want to export. At the moment it is programmed to generate .xlsx files.
+        year (_type_): Indicate the year of the records, this information will be used to generate the name of the .xlsx file that will be exported with the collected information.
+    """
     def __init__(self, file_read, path_export, num_range, file_type, year):
         self.file_read: str = file_read
         self.path_export: str = path_export
@@ -12,7 +27,12 @@ class Scraping:
         self.file_type: str = file_type
         self.year: str = year
 
-    def read_file(self):
+    def __read_file(self):
+        """We import the .csv file with the CUI's
+
+        Returns:
+            _type_: _description_
+        """
         start_range, end_range = self.num_range.split("_")
         cui0 = pd.read_csv(self.file_read, encoding="latin-1")
         cui1 = cui0["cui"][int(start_range): int(end_range)]
@@ -20,7 +40,12 @@ class Scraping:
         print(f"El total de CUIs a scrapear es: {len(list_cui)}")
         return list_cui
 
-    def scrape_info(self):
+    def __scrape_info(self):
+        """_summary_
+
+        Returns:
+            _type_: _description_
+        """
 
         lista_cui = self.read_file()
 
@@ -185,6 +210,11 @@ class Scraping:
         )
 
     def download_data(self):
+        """_summary_
+
+        Returns:
+            _type_: _description_
+        """
         (
             ssi_cui,
             ssi_pip,
