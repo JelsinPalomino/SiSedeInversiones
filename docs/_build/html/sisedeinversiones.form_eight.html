@@ -322,7 +322,18 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-eight">Package Eight</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-eight">Package Eight</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informacion-que-se-extrae-del-formulario-n8">Información que se extrae del formulario N°8</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-datos-generales">Sección: Datos generales</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-datos-de-la-fase-de-formulacion-y-evaluacion-modificados-en-la-fase-de-ejecucion">Sección: Datos de la fase de Formulación y Evaluación, modificados en la fase de Ejecución</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#responsabilidad-funcional-del-proyecto-de-inversion">1.- Responsabilidad funcional del proyecto de inversión</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#articulacion-con-el-programa-multianual-de-inversiones-pmi">2.- Articulación con el programa Multianual de inversiones (PMI)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#institucionalidad">3.- Institucionalidad</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#localizacion-geografica-del-proyecto-de-inversion">4.- Localización geográfica del proyecto de inversión</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
 </ul>
             </nav>
@@ -339,13 +350,64 @@
 <span id="sisedeinversiones-form-eight-package"></span><h1>sisedeinversiones.form_eight package<a class="headerlink" href="#module-sisedeinversiones.form_eight" title="Link to this heading">#</a></h1>
 <section id="package-eight">
 <h2>Package Eight<a class="headerlink" href="#package-eight" title="Link to this heading">#</a></h2>
-<p>El paquete diseñado para el formulario N°08
-ScrapingEight is a class designed to extract data from the Peruvian
-government’s «Investment Monitoring System - SSI» portal.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>This project is in active development</p>
-</div>
+<p>Este subpaquete esta diseñado para extraer información
+del «<em>Formato N°08-A Registros en la Fase de Ejecución</em>»
+que se encuentra dentro del Sistema de Seguimiento de Inversiones.</p>
+<img alt="_images/form8.jpg" src="_images/form8.jpg" />
+<section id="informacion-que-se-extrae-del-formulario-n8">
+<h3>Información que se extrae del formulario N°8<a class="headerlink" href="#informacion-que-se-extrae-del-formulario-n8" title="Link to this heading">#</a></h3>
+<p>La información que se extrae de la página por medio de los CUI,
+es el siguiente:</p>
+<section id="seccion-datos-generales">
+<h4>Sección: Datos generales<a class="headerlink" href="#seccion-datos-generales" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Codigo Unico de Inversiones</p></li>
+<li><p>Nombre de la inversión</p></li>
+</ul>
+</section>
+<section id="seccion-datos-de-la-fase-de-formulacion-y-evaluacion-modificados-en-la-fase-de-ejecucion">
+<h4>Sección: Datos de la fase de Formulación y Evaluación, modificados en la fase de Ejecución<a class="headerlink" href="#seccion-datos-de-la-fase-de-formulacion-y-evaluacion-modificados-en-la-fase-de-ejecucion" title="Link to this heading">#</a></h4>
+</section>
+<section id="responsabilidad-funcional-del-proyecto-de-inversion">
+<h4>1.- Responsabilidad funcional del proyecto de inversión<a class="headerlink" href="#responsabilidad-funcional-del-proyecto-de-inversion" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Función</p></li>
+<li><p>División funcional</p></li>
+<li><p>Grupo funcional</p></li>
+<li><p>Sector responsable</p></li>
+<li><p>Tipología del proyecto</p></li>
+</ul>
+</section>
+<section id="articulacion-con-el-programa-multianual-de-inversiones-pmi">
+<h4>2.- Articulación con el programa Multianual de inversiones (PMI)<a class="headerlink" href="#articulacion-con-el-programa-multianual-de-inversiones-pmi" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Servicio Público con Brecha identificada y priorizada</p></li>
+<li><p>Indicador de brechas de acceso a servicios</p></li>
+<li><p>Unidad de medida</p></li>
+<li><p>Espacio geográfico</p></li>
+<li><p>Contribución de cierre de brechas</p></li>
+</ul>
+</section>
+<section id="institucionalidad">
+<h4>3.- Institucionalidad<a class="headerlink" href="#institucionalidad" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>OPMI</p></li>
+<li><p>UF</p></li>
+<li><p>UEI</p></li>
+<li><p>UEP</p></li>
+</ul>
+</section>
+<section id="localizacion-geografica-del-proyecto-de-inversion">
+<h4>4.- Localización geográfica del proyecto de inversión<a class="headerlink" href="#localizacion-geografica-del-proyecto-de-inversion" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>GPS</p></li>
+<li><p>Departamento</p></li>
+<li><p>Provincia</p></li>
+<li><p>Distrito</p></li>
+<li><p>Centro poblado</p></li>
+</ul>
+</section>
+</section>
 </section>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
@@ -407,7 +469,18 @@ government’s «Investment Monitoring System - SSI» portal.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-eight">Package Eight</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-eight">Package Eight</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informacion-que-se-extrae-del-formulario-n8">Información que se extrae del formulario N°8</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-datos-generales">Sección: Datos generales</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-datos-de-la-fase-de-formulacion-y-evaluacion-modificados-en-la-fase-de-ejecucion">Sección: Datos de la fase de Formulación y Evaluación, modificados en la fase de Ejecución</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#responsabilidad-funcional-del-proyecto-de-inversion">1.- Responsabilidad funcional del proyecto de inversión</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#articulacion-con-el-programa-multianual-de-inversiones-pmi">2.- Articulación con el programa Multianual de inversiones (PMI)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#institucionalidad">3.- Institucionalidad</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#localizacion-geografica-del-proyecto-de-inversion">4.- Localización geográfica del proyecto de inversión</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
 </ul>
   </nav></div>

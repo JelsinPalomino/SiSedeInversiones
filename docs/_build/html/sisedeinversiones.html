@@ -322,9 +322,20 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indice-general-de-los-subpaquetes">Indice General de los subpaquetes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entorno-del-ssi">1. Entorno del SSI</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instalacion">2. Instalación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-de-seguimiento-de-inversiones-ssi">Sistema de Seguimiento de Inversiones (SSI)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-del-ssi">1. Objetivos del SSI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entorno-del-ssi">2. Entorno del SSI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#secciones-del-ssi">3. Secciones del SSI</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-datos-generales">3.1 Sección: Datos generales</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-ejecucion-financiera">3.1 Sección: Ejecución financiera</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-contrataciones">3.1 Sección: Contrataciones</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-infobras">3.1 Sección: InfObras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paquete-sisedeinversiones">Paquete SiSedeInversiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instalacion">1. Instalación</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
@@ -341,16 +352,70 @@
                   
   <section id="module-sisedeinversiones">
 <span id="sisedeinversiones-package"></span><h1>sisedeinversiones package<a class="headerlink" href="#module-sisedeinversiones" title="Link to this heading">#</a></h1>
-<section id="indice-general-de-los-subpaquetes">
-<h2>Indice General de los subpaquetes<a class="headerlink" href="#indice-general-de-los-subpaquetes" title="Link to this heading">#</a></h2>
-<p>Este paquete tiene subpaquetes dedicados a la extracción de información
-del portal de seguimiento de la infromación de Perú (SSI)</p>
+<section id="sistema-de-seguimiento-de-inversiones-ssi">
+<h2>Sistema de Seguimiento de Inversiones (SSI)<a class="headerlink" href="#sistema-de-seguimiento-de-inversiones-ssi" title="Link to this heading">#</a></h2>
+<p>Es una herramienta informática de acceso público que permite el seguimiento de
+las inversiones públicas e integra información de las diferentes fases del ciclo de
+inversión como Programación Multianual de Inversiones, Formulación y
+del Estado como Sistema Nacional de Programacion Multianual y Gestión de
+Evaluación, y Ejecución. Además, está vinculado con varios sistemas informáticos
+Inversiones – Invierte.pe, SEACE, InfObras y SIAF. <label for='sidenote-role-1' class='margin-toggle'><span id="id1">
+<sup>1</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-1' name='sidenote-role-1' class='margin-toggle'><span class="sidenote"><sup>1</sup>Extraido de (S/f). Gob.pe. Recuperado el 19 de enero de 2025, de <a class="reference external" href="https://www.mef.gob.pe/contenidos/inv_publica/docs/Instructivo_BI/2024/Seguimiento_2_Manual_SSI.pdf">https://www.mef.gob.pe/contenidos/inv_publica/docs/Instructivo_BI/2024/Seguimiento_2_Manual_SSI.pdf</a>.</span></p>
+<section id="objetivos-del-ssi">
+<h3>1. Objetivos del SSI<a class="headerlink" href="#objetivos-del-ssi" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>N°</p></th>
+<th class="head"><p>Objetivos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>01</p></td>
+<td><p>Mostrar información sistematizada de las inversiones públicas, para un adecuado seguimiento</p></td>
+</tr>
+<tr class="row-odd"><td><p>02</p></td>
+<td><p>Optimizar el tiempo de búsqueda a través de los vinculos de acceso con los formatos de las diferentes fases del Ciclo de Inversión</p></td>
+</tr>
+<tr class="row-even"><td><p>03</p></td>
+<td><p>Brindar información actualizada de las inversiones con la finalidad de facilitar la elaboración de reportes de seguimiento.</p></td>
+</tr>
+<tr class="row-odd"><td><p>04</p></td>
+<td><p>Conocer los actores que intervienen en la gestión de la Inversión Pública (UEI, UF y OPMI)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="entorno-del-ssi">
-<h3>1. Entorno del SSI<a class="headerlink" href="#entorno-del-ssi" title="Link to this heading">#</a></h3>
+<h3>2. Entorno del SSI<a class="headerlink" href="#entorno-del-ssi" title="Link to this heading">#</a></h3>
 <img alt="_images/ssi.png" src="_images/ssi.png" />
 </section>
+<section id="secciones-del-ssi">
+<h3>3. Secciones del SSI<a class="headerlink" href="#secciones-del-ssi" title="Link to this heading">#</a></h3>
+<section id="seccion-datos-generales">
+<h4>3.1 Sección: Datos generales<a class="headerlink" href="#seccion-datos-generales" title="Link to this heading">#</a></h4>
+<img alt="_images/datosGenerales.png" src="_images/datosGenerales.png" />
+</section>
+<section id="seccion-ejecucion-financiera">
+<h4>3.1 Sección: Ejecución financiera<a class="headerlink" href="#seccion-ejecucion-financiera" title="Link to this heading">#</a></h4>
+<img alt="_images/ejecucionFinanciera.png" src="_images/ejecucionFinanciera.png" />
+</section>
+<section id="seccion-contrataciones">
+<h4>3.1 Sección: Contrataciones<a class="headerlink" href="#seccion-contrataciones" title="Link to this heading">#</a></h4>
+<img alt="_images/Contrataciones.png" src="_images/Contrataciones.png" />
+</section>
+<section id="seccion-infobras">
+<h4>3.1 Sección: InfObras<a class="headerlink" href="#seccion-infobras" title="Link to this heading">#</a></h4>
+<img alt="_images/InfObras.png" src="_images/InfObras.png" />
+</section>
+</section>
+</section>
+<section id="paquete-sisedeinversiones">
+<h2>Paquete SiSedeInversiones<a class="headerlink" href="#paquete-sisedeinversiones" title="Link to this heading">#</a></h2>
 <section id="instalacion">
-<h3>2. Instalación<a class="headerlink" href="#instalacion" title="Link to this heading">#</a></h3>
+<h3>1. Instalación<a class="headerlink" href="#instalacion" title="Link to this heading">#</a></h3>
 <p>Para usar SiSedeInversiones, primero debes instalarlo usando pip:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>SiSedeInversiones
 </pre></div>
@@ -362,7 +427,18 @@ del portal de seguimiento de la infromación de Perú (SSI)</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="sisedeinversiones.form_eight.html">sisedeinversiones.form_eight package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sisedeinversiones.form_eight.html#package-eight">Package Eight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sisedeinversiones.form_eight.html#package-eight">Package Eight</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sisedeinversiones.form_eight.html#informacion-que-se-extrae-del-formulario-n8">Información que se extrae del formulario N°8</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_eight.html#seccion-datos-generales">Sección: Datos generales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_eight.html#seccion-datos-de-la-fase-de-formulacion-y-evaluacion-modificados-en-la-fase-de-ejecucion">Sección: Datos de la fase de Formulación y Evaluación, modificados en la fase de Ejecución</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_eight.html#responsabilidad-funcional-del-proyecto-de-inversion">1.- Responsabilidad funcional del proyecto de inversión</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_eight.html#articulacion-con-el-programa-multianual-de-inversiones-pmi">2.- Articulación con el programa Multianual de inversiones (PMI)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_eight.html#institucionalidad">3.- Institucionalidad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_eight.html#localizacion-geografica-del-proyecto-de-inversion">4.- Localización geográfica del proyecto de inversión</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="sisedeinversiones.form_eight.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sisedeinversiones.form_eight.eight.html"><em>Class ScrapingEight</em></a></li>
 <li class="toctree-l3"><a class="reference internal" href="sisedeinversiones.form_eight.eight.html#sisedeinversiones.form_eight.eight.ScrapingEight"><code class="docutils literal notranslate"><span class="pre">ScrapingEight</span></code></a><ul>
@@ -436,9 +512,20 @@ del portal de seguimiento de la infromación de Perú (SSI)</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indice-general-de-los-subpaquetes">Indice General de los subpaquetes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entorno-del-ssi">1. Entorno del SSI</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instalacion">2. Instalación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-de-seguimiento-de-inversiones-ssi">Sistema de Seguimiento de Inversiones (SSI)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-del-ssi">1. Objetivos del SSI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entorno-del-ssi">2. Entorno del SSI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#secciones-del-ssi">3. Secciones del SSI</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-datos-generales">3.1 Sección: Datos generales</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-ejecucion-financiera">3.1 Sección: Ejecución financiera</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-contrataciones">3.1 Sección: Contrataciones</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seccion-infobras">3.1 Sección: InfObras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paquete-sisedeinversiones">Paquete SiSedeInversiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instalacion">1. Instalación</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
