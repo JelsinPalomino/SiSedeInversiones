@@ -5,12 +5,12 @@
 """
 
 import time
-
+from ..utils.read_utils import ReadsFiles
 import pandas as pd
 import rpa as r
 
 
-class ScrapingEight:
+class ScrapingEight(ReadsFiles):
     """Scraping Class Attributes
 
     Args:
@@ -20,29 +20,24 @@ class ScrapingEight:
         file_type (_type_): This is the type of file you want to export. At the moment it is programmed to generate .xlsx files.
         year (_type_): Indicate the year of the records, this information will be used to generate the name of the .xlsx file that will be exported with the collected information.
     """
-    def __init__(self, file_read, path_export, num_range, file_type, year):
-        self.file_read: str = file_read
+    def __init__(self, file_read, num_range, path_export, file_type, year):
+        ReadsFiles.__init__(self, file_read = file_read, 
+                         num_range = num_range)
         self.path_export: str = path_export
-        self.num_range: str = num_range
         self.file_type: str = file_type
         self.year: str = year
 
-    def __read_file(self):
+    def read_file(self):
         """We import the .csv file with the CUI's
 
         Returns:
             _type_: _description_
         """
-        start_range, end_range = self.num_range.split("_")
-        cui0 = pd.read_csv(self.file_read, encoding="latin-1")
-        cui1 = cui0["cui"][int(start_range): int(end_range)]
-        list_cui = list(map(str, cui1.values.tolist()))
-        print(f"El total de CUIs a scrapear es: {len(list_cui)}")
-        return list_cui
+        return ReadsFiles(self.file_read, self.num_range).read_file_csv()
 
-    def __scrape_info(self):
+    def scrape_info(self):
         """_summary_
-
+        
         Returns:
             _type_: _description_
         """
