@@ -22,6 +22,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 
 """
 
-__all__=['general']
+__all__=['lista_ejecucion_simple']
 
 # from . import general
