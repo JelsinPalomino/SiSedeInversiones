@@ -2,6 +2,8 @@
 # import sisedeinversiones as ssi
 # from sisedeinversiones.form_eight import Scraping
 from sisedeinversiones.form_eight.eight import ScrapingEight
+from sisedeinversiones.lista_ejecucion.lista_ejecucion_simple import ScrapingListaEjecucion
+from sisedeinversiones.ssi.main_ssi import ScrapingMainSSI
 
 # file_read = "E:/otrosTrabajosSTATA-practicas/proyectStataPythonToGitHub/scrapingFunctions/SiSedeInversiones/CUI_2019_dep7.csv"
 file_read = "CUI_2019_dep7.csv"
@@ -12,6 +14,11 @@ year = "2019"
 
 # scraper = ssi.format_eight.Scraping(file_read, path_export, num_range, file_type, year)
 
-scraper = ScrapingEight(file_read, num_range, path_export, file_type, year)
-# scraper.shows_params()
-scraper.download_data()
+# scraperEight = ScrapingEight(file_read, num_range, path_export, file_type, year)
+# scraperEight.download_data()
+
+# scraperListaEjecucion = ScrapingListaEjecucion(file_read, num_range, path_export, file_type, year)
+# scraperListaEjecucion.download_data()
+
+scraperMainSSI = ScrapingMainSSI(file_read, num_range, path_export, file_type, year)
+scraperMainSSI.download_data()
