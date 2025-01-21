@@ -82,7 +82,7 @@ class ScrapingListaEjecucion(ReadsFiles):
                 time.sleep(2)
 
             print(
-                f"Se esta trabajando el regtistro {one_cui} y el elemento existe {element_exist}"
+                f"Se esta trabajando el regtistro {one_cui} con el CUI {lista_cui[one_cui]} y el elemento existe {element_exist}"
             )
             # Datos generales del proyecto o inversión
             cui                      = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[2]/div[2]')
