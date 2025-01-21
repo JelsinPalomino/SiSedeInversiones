@@ -70,4 +70,4 @@ Para usar SiSedeInversiones, primero debes instalarlo usando pip:
 
 """
 
-__all__=["form_eight", "lista_ejecucion"]
+__all__=["main", "form_eight", "lista_ejecucion"]

@@ -94,7 +94,7 @@ class ScrapingEight(ReadsFiles):
                 time.sleep(2)
 
             print(
-                f"Se esta trabajando el regtistro {one_cui} y el elemento existe {element_exist}"
+                f"Se esta trabajando el regtistro {one_cui} con el CUI {lista_cui[one_cui]} y el elemento existe {element_exist}"
             )
             # Identificar y almacenar la información de la página
             cui = r.read('//*[@id="divVistaPreliminar"]/table[1]/tbody/tr[1]/td[2]/div')
