@@ -1,6 +1,6 @@
 """
-*Class ScrapingGeneral*
-=======================
+*Class ScrapingListaEjecucion*
+==============================
 """
 
 import time
@@ -12,14 +12,14 @@ import rpa as r
 
 class ScrapingListaEjecucion(ReadsFiles):
 
-    """Scraping Class Attributes
+    """_summary_
 
     Args:
-        file_read (_type_): It is the address where the file with the CUI codes that we are going to consume is located.
-        path_export (_type_): Address where the information generated after data extraction will be exported.
-        num_range (_type_): Indicates the range of records that will be worked on, separated by a "_" between the upper and lower limits.
-        file_type (_type_): This is the type of file you want to export. At the moment it is programmed to generate .xlsx files.
-        year (_type_): Indicate the year of the records, this information will be used to generate the name of the .xlsx file that will be exported with the collected information.
+        file_read (str): Este atributo indica la dirección del archivo a leer. Para este caso un csv.
+        num_range (str): Indicamos el rango de registros que se trabajara, el formato para indicar dicho rango es [num_inicio]_[num_final], es importante separarlos por un guin bajo. Sino se tendra problemas.
+        path_export (str): Aqui indicamos la dirección de la carpeta donde se quiere exportar el archivo generado.
+        file_type (str): Aqui indicamos el tipo de archivo que se quiere descargar. De momento solo se tiene habilitado el formato .xlsx para exportar la información.
+        year (str): Indicamos el año de los registros que se estan trabajando.
     """
     def __init__(self, file_read, num_range, path_export, file_type, year):
         ReadsFiles.__init__(self, file_read = file_read, 
@@ -29,19 +29,19 @@ class ScrapingListaEjecucion(ReadsFiles):
         self.year: str = year
 
     def read_file(self):
-        """We import the .csv file with the CUI's
+        """Aqui se lee los archivos CUI's y se filtra la cantidad de registros a trabajar
 
         Returns:
-            _type_: _description_
+            list: Lista de los CUI's que se trabajaran
         """
         return ReadsFiles(self.file_read, self.num_range).read_file_csv()
 
 
     def scrape_info(self):
-        """_summary_
+        """Este método se encarga de automatizar el proceso de extracción de los datos
 
         Returns:
-            _type_: _description_
+            Tupla: Genera una tupla con la información que se reunio durante el proceso.
         """
 
         lista_cui = self.read_file()
@@ -133,10 +133,10 @@ class ScrapingListaEjecucion(ReadsFiles):
         )
 
     def download_data(self):
-        """_summary_
+        """Aqui exportamos la información reunida con el metodo scrape_info()
 
         Returns:
-            _type_: _description_
+            xlsx: Se recibe la tupla que luego se exporta en formato .xslx 
         """
         (
             ssi_cui,

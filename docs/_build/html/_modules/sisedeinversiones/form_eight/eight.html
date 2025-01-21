@@ -152,11 +152,23 @@
 
 </ul>
 </details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.form_general.html">sisedeinversiones.form_general package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.form_general.general.html"><em>Class ScrapingGeneral</em></a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.lista_ejecucion.html">sisedeinversiones.lista_ejecucion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html"><em>Class ScrapingListaEjecucion</em></a></li>
 
 </ul>
 </details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.ssi.html">sisedeinversiones.ssi package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.ssi.main_ssi.html"><em>Clase ScrapingMainSSI</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.utils.html">sisedeinversiones.utils package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.utils.read_utils.html"><em>Class ReadsFiles</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sisedeinversiones.main.html">Clases SSI</a></li>
+
 </ul>
 </details></li>
 </ul>
@@ -283,14 +295,14 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.read_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReadsFiles</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">rpa</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">r</span>
 
 
 <div class="viewcode-block" id="ScrapingEight">
 <a class="viewcode-back" href="../../../sisedeinversiones.form_eight.eight.html#sisedeinversiones.form_eight.eight.ScrapingEight">[documentos]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">ScrapingEight</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ScrapingEight</span><span class="p">(</span><span class="n">ReadsFiles</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Scraping Class Attributes</span>
 
 <span class="sd">    Args:</span>
@@ -300,29 +312,29 @@
 <span class="sd">        file_type (_type_): This is the type of file you want to export. At the moment it is programmed to generate .xlsx files.</span>
 <span class="sd">        year (_type_): Indicate the year of the records, this information will be used to generate the name of the .xlsx file that will be exported with the collected information.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">file_read</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="n">ReadsFiles</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span> <span class="o">=</span> <span class="n">file_read</span><span class="p">,</span> 
+                         <span class="n">num_range</span> <span class="o">=</span> <span class="n">num_range</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">path_export</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">num_range</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">file_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">year</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">__read_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ScrapingEight.read_file">
+<a class="viewcode-back" href="../../../sisedeinversiones.form_eight.eight.html#sisedeinversiones.form_eight.eight.ScrapingEight.read_file">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;We import the .csv file with the CUI&#39;s</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            _type_: _description_</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">start_range</span><span class="p">,</span> <span class="n">end_range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
-        <span class="n">cui0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;latin-1&quot;</span><span class="p">)</span>
-        <span class="n">cui1</span> <span class="o">=</span> <span class="n">cui0</span><span class="p">[</span><span class="s2">&quot;cui&quot;</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">start_range</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_range</span><span class="p">)]</span>
-        <span class="n">list_cui</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">cui1</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El total de CUIs a scrapear es: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">list_cui</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">list_cui</span>
+        <span class="k">return</span> <span class="n">ReadsFiles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">)</span><span class="o">.</span><span class="n">read_file_csv</span><span class="p">()</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">__scrape_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ScrapingEight.scrape_info">
+<a class="viewcode-back" href="../../../sisedeinversiones.form_eight.eight.html#sisedeinversiones.form_eight.eight.ScrapingEight.scrape_info">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scrape_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
-
+<span class="sd">        </span>
 <span class="sd">        Returns:</span>
 <span class="sd">            _type_: _description_</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -379,7 +391,7 @@
                 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
             <span class="nb">print</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Se esta trabajando el regtistro </span><span class="si">{</span><span class="n">one_cui</span><span class="si">}</span><span class="s2"> y el elemento existe </span><span class="si">{</span><span class="n">element_exist</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Se esta trabajando el regtistro </span><span class="si">{</span><span class="n">one_cui</span><span class="si">}</span><span class="s2"> con el CUI </span><span class="si">{</span><span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">]</span><span class="si">}</span><span class="s2"> y el elemento existe </span><span class="si">{</span><span class="n">element_exist</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
             <span class="c1"># Identificar y almacenar la información de la página</span>
             <span class="n">cui</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;divVistaPreliminar&quot;]/table[1]/tbody/tr[1]/td[2]/div&#39;</span><span class="p">)</span>
@@ -487,7 +499,8 @@
             <span class="n">ssi_provincia</span><span class="p">,</span>
             <span class="n">ssi_distrito</span><span class="p">,</span>
             <span class="n">ssi_centro_poblado</span><span class="p">,</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
+
 
 <div class="viewcode-block" id="ScrapingEight.download_data">
 <a class="viewcode-back" href="../../../sisedeinversiones.form_eight.eight.html#sisedeinversiones.form_eight.eight.ScrapingEight.download_data">[documentos]</a>

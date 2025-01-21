@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sisedeinversiones.main &#8212; SiSedeInversiones - v0.0.1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=7535f54f"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/translations.js?v=f85f4cfb"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/sisedeinversiones/main';</script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.jpg" class="logo__image only-light" alt="SiSedeInversiones - v0.0.1 - Home"/>
+    <img src="../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="SiSedeInversiones - v0.0.1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules.html">SiSedeInversiones</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../sisedeinversiones.html">sisedeinversiones package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../sisedeinversiones.form_eight.html">sisedeinversiones.form_eight package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../sisedeinversiones.form_eight.eight.html"><em>Class ScrapingEight</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../sisedeinversiones.lista_ejecucion.html">sisedeinversiones.lista_ejecucion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html"><em>Class ScrapingListaEjecucion</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../sisedeinversiones.ssi.html">sisedeinversiones.ssi package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../sisedeinversiones.ssi.main_ssi.html"><em>Clase ScrapingMainSSI</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../sisedeinversiones.utils.html">sisedeinversiones.utils package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../sisedeinversiones.utils.read_utils.html"><em>Class ReadsFiles</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sisedeinversiones.main.html">Clases SSI</a></li>
+
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/JelsinPalomino/SiSedeInversiones" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Repositorio de origen"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Código fuente para sisedeinversiones.main</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Clases SSI</span>
+<span class="sd">==========</span>
+
+<span class="sd">En esta sección, se construye una clase general que hereda los métodos de las clases específicas </span>
+<span class="sd">para cada sección del portal (Formato8, lista de ejecución y el SSI).</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.form_eight.eight</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScrapingEight</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lista_ejecucion.lista_ejecucion_simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScrapingListaEjecucion</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.ssi.main_ssi</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScrapingMainSSI</span>
+
+<div class="viewcode-block" id="SSI">
+<a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI">[documentos]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SSI</span><span class="p">(</span><span class="n">ScrapingEight</span><span class="p">,</span> <span class="n">ScrapingListaEjecucion</span><span class="p">,</span> <span class="n">ScrapingMainSSI</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Con esta clase unimos los métodos principales de las clases específicas para cada</span>
+<span class="sd">        seccion del SSI.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ScrapingEight (string): tiene los atributos file_read, num_range, path_export, file_type, year.</span>
+<span class="sd">        ScrapingListaEjecucion (string): tiene los atributos file_read, num_range, path_export, file_type, year.</span>
+<span class="sd">        ScrapingMainSSI (string): tiene los atributos file_read, num_range, path_export, file_type, year.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="n">ScrapingEight</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+        <span class="n">ScrapingListaEjecucion</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+        <span class="n">ScrapingMainSSI</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SSI.format_eight">
+<a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI.format_eight">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_eight</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Método que descarga los datos de la sección Formato 8 del SSI.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            xlsx: Un archivo xlsx con lso datos almancenados del formato 8</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ScrapingEight</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
+
+    
+<div class="viewcode-block" id="SSI.list_ejecucion">
+<a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI.list_ejecucion">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_ejecucion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Método que descarga los datos de la sección Lista de Ejecución del SSI.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            xlsx: Genera un archivo xlsx con los datos almacenados de la lista</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ScrapingListaEjecucion</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="SSI.main_ssi">
+<a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI.main_ssi">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">main_ssi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Método que descarga los datos de la sección principal del SSI.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            xlsx: Genera un archivc xlsx con los datos almacenados de la sección principal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ScrapingMainSSI</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
+</div>
+
+    
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Jelsin Palomino
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Jelsin Palomino.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

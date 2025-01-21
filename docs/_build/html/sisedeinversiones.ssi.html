@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class ScrapingGeneral &#8212; SiSedeInversiones - v0.0.1</title>
+    <title>sisedeinversiones.ssi package &#8212; SiSedeInversiones - v0.0.1</title>
   
   
   
@@ -44,10 +44,11 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="_static/translations.js?v=f85f4cfb"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'sisedeinversiones.form_general.general';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sisedeinversiones.ssi';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="prev" title="sisedeinversiones.form_general package" href="sisedeinversiones.form_general.html" />
+    <link rel="next" title="Clase ScrapingMainSSI" href="sisedeinversiones.ssi.main_ssi.html" />
+    <link rel="prev" title="Class ScrapingListaEjecucion" href="sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -152,11 +153,23 @@
 
 </ul>
 </details></li>
-<li class="toctree-l3 current active has-children"><a class="reference internal" href="sisedeinversiones.form_general.html">sisedeinversiones.form_general package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l4 current active"><a class="current reference internal" href="#"><em>Class ScrapingGeneral</em></a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="sisedeinversiones.lista_ejecucion.html">sisedeinversiones.lista_ejecucion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html"><em>Class ScrapingListaEjecucion</em></a></li>
 
 </ul>
 </details></li>
+<li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">sisedeinversiones.ssi package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html"><em>Clase ScrapingMainSSI</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="sisedeinversiones.utils.html">sisedeinversiones.utils package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.utils.read_utils.html"><em>Class ReadsFiles</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="sisedeinversiones.main.html">Clases SSI</a></li>
+
 </ul>
 </details></li>
 </ul>
@@ -235,7 +248,7 @@
       
       
       
-      <li><a href="_sources/sisedeinversiones.form_general.general.rst" target="_blank"
+      <li><a href="_sources/sisedeinversiones.ssi.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +324,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Class ScrapingGeneral</h1>
+    <h1>sisedeinversiones.ssi package</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -321,13 +334,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Class ScrapingGeneral</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_general.general.ScrapingGeneral"><code class="docutils literal notranslate"><span class="pre">ScrapingGeneral</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_general.general.ScrapingGeneral.download_data"><code class="docutils literal notranslate"><span class="pre">ScrapingGeneral.download_data()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -338,30 +346,121 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="class-scrapinggeneral">
-<span id="module-sisedeinversiones.form_general.general"></span><h1><em>Class ScrapingGeneral</em><a class="headerlink" href="#class-scrapinggeneral" title="Link to this heading">#</a></h1>
+  <section id="module-sisedeinversiones.ssi">
+<span id="sisedeinversiones-ssi-package"></span><h1>sisedeinversiones.ssi package<a class="headerlink" href="#module-sisedeinversiones.ssi" title="Link to this heading">#</a></h1>
+<p>La clase ScrapingMainSSI, esta diseñada para extrar la información que se encuentra en la
+página del Sistema de Seguimiento de Inversiones (SSI) del gobierno peruano.
+Se usa el Código Único de Inversión (CUI) para filtrar la información que corresponde al
+proyecto de inversion que se tiene identifciado con el CUI.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sección</p></th>
+<th class="head"><p>Subsecciones</p></th>
+<th class="head"><p>Nombre en SSI</p></th>
+<th class="head"><p>Código exportado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="24"><p>DATOS GENERALES</p></td>
+<td rowspan="7"></td>
+<td><p>Código único</p></td>
+<td><p>dg_cui</p></td>
+</tr>
+<tr class="row-odd"><td><p>Código SNIP</p></td>
+<td><p>dg_codio_snip</p></td>
+</tr>
+<tr class="row-even"><td><p>Fecha de registro</p></td>
+<td><p>dg_fecha_registro</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nombre de la inversión</p></td>
+<td><p>dg_nombre_inversion</p></td>
+</tr>
+<tr class="row-even"><td><p>Estado de la inversión</p></td>
+<td><p>dg_estado_inversion</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tipo de inversión</p></td>
+<td><p>dg_tipo_inversion</p></td>
+</tr>
+<tr class="row-even"><td><p>Programa PMI</p></td>
+<td><p>dg_programado_pmi</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><ol class="upperroman simple">
+<li><p>Institucionalidad</p></li>
+</ol>
+</td>
+<td><p>Oficina de Programación Multianual de Inversiones (OPMI)</p></td>
+<td><p>dg_opmi</p></td>
+</tr>
+<tr class="row-even"><td><p>Unidad Formuladora (UF)</p></td>
+<td><p>dg_uf</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unidad Ejecutora de Inversiones (UEI)</p></td>
+<td><p>dg_uei</p></td>
+</tr>
+<tr class="row-even"><td rowspan="6"><p>II. Datos de la fase de
+formulación y evaluación</p></td>
+<td><p>Situación de la inversión</p></td>
+<td><p>dg_situcion</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fecha de viabilidad/aprobación</p></td>
+<td><p>dg_fecha_viabilidad</p></td>
+</tr>
+<tr class="row-even"><td><p>Decreto de emergencia</p></td>
+<td><p>dg_decreto_emergencia</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cadena funcional</p></td>
+<td><p>dg_cadena_funcional</p></td>
+</tr>
+<tr class="row-even"><td><p>Costo de inversión aprobado</p></td>
+<td><p>dg_costo_inversion_aprobado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Número de beneficiarios</p></td>
+<td><p>dg_numero_beneficiarios</p></td>
+</tr>
+<tr class="row-even"><td rowspan="8"><p>III. Datos de la fase de
+ejecución</p></td>
+<td><p>¿Tiene expediente técnico o documento equivalente</p></td>
+<td><p>dg_expediente_tecnico</p></td>
+</tr>
+<tr class="row-odd"><td><p>¿Tiene registro de seguimiento?</p></td>
+<td><p>dg_registro_seguimiento</p></td>
+</tr>
+<tr class="row-even"><td><p>Fecha de inicio de ejecución</p></td>
+<td><p>dg_inicio_ejecucion</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fecha de fin de ejecución</p></td>
+<td><p>dg_fin_ejecucion</p></td>
+</tr>
+<tr class="row-even"><td><p>Costo de inversión actualizada (S/)</p></td>
+<td><p>dg_inversion_actualizada</p></td>
+</tr>
+<tr class="row-odd"><td><p>Costo de controversias (S/)</p></td>
+<td><p>dg_costo_controversias</p></td>
+</tr>
+<tr class="row-even"><td><p>Monto de carta fianza (S/)</p></td>
+<td><p>dg_monto_carta_fianza</p></td>
+</tr>
+<tr class="row-odd"><td><p>Costo total actualizado (S/)</p></td>
+<td><p>dg_costo_total_actualizado</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html"><em>Clase ScrapingMainSSI</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI"><code class="docutils literal notranslate"><span class="pre">ScrapingMainSSI</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.download_data"><code class="docutils literal notranslate"><span class="pre">ScrapingMainSSI.download_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.read_file"><code class="docutils literal notranslate"><span class="pre">ScrapingMainSSI.read_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.scrape_info"><code class="docutils literal notranslate"><span class="pre">ScrapingMainSSI.scrape_info()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
-<dl class="py class">
-<dt class="sig sig-object py" id="sisedeinversiones.form_general.general.ScrapingGeneral">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sisedeinversiones.form_general.general.</span></span><span class="sig-name descname"><span class="pre">ScrapingGeneral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_read</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_export</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_general/general.html#ScrapingGeneral"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_general.general.ScrapingGeneral" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p><strong>Scaping Class</strong></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="sisedeinversiones.form_general.general.ScrapingGeneral.download_data">
-<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_general/general.html#ScrapingGeneral.download_data"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_general.general.ScrapingGeneral.download_data" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
-<dd class="field-odd"><p>_description_</p>
-</dd>
-<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
-<dd class="field-even"><p>_type_</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+</section>
 
 
                 </article>
@@ -375,13 +474,22 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="sisedeinversiones.form_general.html"
+       href="sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">sisedeinversiones.form_general package</p>
+        <p class="prev-next-title"><em>Class ScrapingListaEjecucion</em></p>
       </div>
+    </a>
+    <a class="right-next"
+       href="sisedeinversiones.ssi.main_ssi.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title"><em>Clase ScrapingMainSSI</em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -400,13 +508,8 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Class ScrapingGeneral</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_general.general.ScrapingGeneral"><code class="docutils literal notranslate"><span class="pre">ScrapingGeneral</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_general.general.ScrapingGeneral.download_data"><code class="docutils literal notranslate"><span class="pre">ScrapingGeneral.download_data()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
