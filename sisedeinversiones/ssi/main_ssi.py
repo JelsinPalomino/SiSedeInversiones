@@ -1,4 +1,14 @@
+"""
+*Clase ScrapingMainSSI*
+=======================
 
+Esta clase se encarga de extraer información de las secciones:
+
+- Datos generales
+- Ejecución financiera
+- Contrataciones
+
+"""
 
 import pandas as pd
 import rpa as r
@@ -8,6 +18,15 @@ from ..utils.read_utils import ReadsFiles
 
 
 class ScrapingMainSSI(ReadsFiles):
+    """_summary_
+
+    Args:
+        file_read (str): Este atributo indica la dirección del archivo a leer. Para este caso un csv.
+        num_range (str): Indicamos el rango de registros que se trabajara, el formato para indicar dicho rango es [num_inicio]_[num_final], es importante separarlos por un guin bajo. Sino se tendra problemas.
+        path_export (str): Aqui indicamos la dirección de la carpeta donde se quiere exportar el archivo generado.
+        file_type (str): Aqui indicamos el tipo de archivo que se quiere descargar. De momento solo se tiene habilitado el formato .xlsx para exportar la información.
+        year (str): Indicamos el año de los registros que se estan trabajando.
+    """
     def __init__(self, file_read, num_range, path_export, file_type, year):
         ReadsFiles.__init__(self, file_read, num_range)
         self.path_export = path_export

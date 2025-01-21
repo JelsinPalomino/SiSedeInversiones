@@ -13,4 +13,14 @@ Subpackages
    :maxdepth: 4
 
    sisedeinversiones.form_eight
-   sisedeinversiones.form_general
+   sisedeinversiones.lista_ejecucion
+   sisedeinversiones.ssi
+   sisedeinversiones.utils
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   sisedeinversiones.main

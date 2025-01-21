@@ -1,23 +1,22 @@
 """
-Package General
-===============
+Lista de ejecución simple pública
+=================================
 
-**ScrapingGeneral** es una clase diseñada para la extracción de información
-de sitios web utilizando técnicas de scraping. Esta clase proporciona
-funcionalidades para la navegación, la extracción de datos y la manipulación de
-información.
+**ScrapingListaEjecucion** es una clase diseñada para automatizar la extracción de información
+de la Lista de ejecución simple pública donde se encuentra el CUI, el nombre del proyecto,
+el monto aprobado del proyecto, el monto actualizado, la fecha de la última modificación.
 
-.. admonition:: A sidebar admonition!
+.. admonition:: Importante!
     :class: sidebar note
 
-    Some sidebar content.
+    Esta sección se encuentra dentro de los datos generales.
     
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Esta información es sustancial para lograr conocer la evolución de los cambios que se tienen 
+de los proyectos.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    
+
+.. image:: _static/listaEjecucionSimple.jpg
+
 
 
 """

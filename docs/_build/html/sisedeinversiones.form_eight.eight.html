@@ -47,7 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'sisedeinversiones.form_eight.eight';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="sisedeinversiones.form_general package" href="sisedeinversiones.form_general.html" />
+    <link rel="next" title="sisedeinversiones.lista_ejecucion package" href="sisedeinversiones.lista_ejecucion.html" />
     <link rel="prev" title="sisedeinversiones.form_eight package" href="sisedeinversiones.form_eight.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -153,11 +153,23 @@
 
 </ul>
 </details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="sisedeinversiones.form_general.html">sisedeinversiones.form_general package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.form_general.general.html"><em>Class ScrapingGeneral</em></a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="sisedeinversiones.lista_ejecucion.html">sisedeinversiones.lista_ejecucion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html"><em>Class ScrapingListaEjecucion</em></a></li>
 
 </ul>
 </details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="sisedeinversiones.ssi.html">sisedeinversiones.ssi package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.ssi.main_ssi.html"><em>Clase ScrapingMainSSI</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="sisedeinversiones.utils.html">sisedeinversiones.utils package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="sisedeinversiones.utils.read_utils.html"><em>Class ReadsFiles</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="sisedeinversiones.main.html">Clases SSI</a></li>
+
 </ul>
 </details></li>
 </ul>
@@ -325,6 +337,8 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Class ScrapingEight</em></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight"><code class="docutils literal notranslate"><span class="pre">ScrapingEight</span></code></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight.download_data"><code class="docutils literal notranslate"><span class="pre">ScrapingEight.download_data()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight.read_file"><code class="docutils literal notranslate"><span class="pre">ScrapingEight.read_file()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight.scrape_info"><code class="docutils literal notranslate"><span class="pre">ScrapingEight.scrape_info()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -344,8 +358,8 @@
 </section>
 <dl class="py class">
 <dt class="sig sig-object py" id="sisedeinversiones.form_eight.eight.ScrapingEight">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sisedeinversiones.form_eight.eight.</span></span><span class="sig-name descname"><span class="pre">ScrapingEight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_read</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_export</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_eight/eight.html#ScrapingEight"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_eight.eight.ScrapingEight" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sisedeinversiones.form_eight.eight.</span></span><span class="sig-name descname"><span class="pre">ScrapingEight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_read</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_export</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_eight/eight.html#ScrapingEight"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_eight.eight.ScrapingEight" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisedeinversiones.utils.read_utils.html#sisedeinversiones.utils.read_utils.ReadsFiles" title="sisedeinversiones.utils.read_utils.ReadsFiles"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadsFiles</span></code></a></p>
 <p>Scraping Class Attributes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros<span class="colon">:</span></dt>
@@ -361,6 +375,34 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="sisedeinversiones.form_eight.eight.ScrapingEight.download_data">
 <span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_eight/eight.html#ScrapingEight.download_data"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_eight.eight.ScrapingEight.download_data" title="Link to this definition">#</a></dt>
+<dd><p>_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_description_</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sisedeinversiones.form_eight.eight.ScrapingEight.read_file">
+<span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_eight/eight.html#ScrapingEight.read_file"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_eight.eight.ScrapingEight.read_file" title="Link to this definition">#</a></dt>
+<dd><p>We import the .csv file with the CUI’s</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_description_</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>_type_</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sisedeinversiones.form_eight.eight.ScrapingEight.scrape_info">
+<span class="sig-name descname"><span class="pre">scrape_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sisedeinversiones/form_eight/eight.html#ScrapingEight.scrape_info"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#sisedeinversiones.form_eight.eight.ScrapingEight.scrape_info" title="Link to this definition">#</a></dt>
 <dd><p>_summary_</p>
 <dl class="field-list simple">
 <dt class="field-odd">Devuelve<span class="colon">:</span></dt>
@@ -396,11 +438,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="sisedeinversiones.form_general.html"
+       href="sisedeinversiones.lista_ejecucion.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">sisedeinversiones.form_general package</p>
+        <p class="prev-next-title">sisedeinversiones.lista_ejecucion package</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -424,6 +466,8 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Class ScrapingEight</em></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight"><code class="docutils literal notranslate"><span class="pre">ScrapingEight</span></code></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight.download_data"><code class="docutils literal notranslate"><span class="pre">ScrapingEight.download_data()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight.read_file"><code class="docutils literal notranslate"><span class="pre">ScrapingEight.read_file()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sisedeinversiones.form_eight.eight.ScrapingEight.scrape_info"><code class="docutils literal notranslate"><span class="pre">ScrapingEight.scrape_info()</span></code></a></li>
 </ul>
 </li>
 </ul>

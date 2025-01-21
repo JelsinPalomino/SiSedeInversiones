@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sisedeinversiones.ssi.main_ssi &#8212; SiSedeInversiones - v0.0.1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=7535f54f"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/translations.js?v=f85f4cfb"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/sisedeinversiones/ssi/main_ssi';</script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.jpg" class="logo__image only-light" alt="SiSedeInversiones - v0.0.1 - Home"/>
+    <img src="../../../_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="SiSedeInversiones - v0.0.1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">SiSedeInversiones</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../sisedeinversiones.html">sisedeinversiones package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.form_eight.html">sisedeinversiones.form_eight package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.form_eight.eight.html"><em>Class ScrapingEight</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.lista_ejecucion.html">sisedeinversiones.lista_ejecucion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html"><em>Class ScrapingListaEjecucion</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.ssi.html">sisedeinversiones.ssi package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.ssi.main_ssi.html"><em>Clase ScrapingMainSSI</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../sisedeinversiones.utils.html">sisedeinversiones.utils package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../sisedeinversiones.utils.read_utils.html"><em>Class ReadsFiles</em></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sisedeinversiones.main.html">Clases SSI</a></li>
+
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/JelsinPalomino/SiSedeInversiones" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Repositorio de origen"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Código fuente para sisedeinversiones.ssi.main_ssi</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">*Clase ScrapingMainSSI*</span>
+<span class="sd">=======================</span>
+
+<span class="sd">Esta clase se encarga de extraer información de las secciones:</span>
+
+<span class="sd">- Datos generales</span>
+<span class="sd">- Ejecución financiera</span>
+<span class="sd">- Contrataciones</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rpa</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">r</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.read_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReadsFiles</span>
+
+
+<div class="viewcode-block" id="ScrapingMainSSI">
+<a class="viewcode-back" href="../../../sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI">[documentos]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ScrapingMainSSI</span><span class="p">(</span><span class="n">ReadsFiles</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_read (str): Este atributo indica la dirección del archivo a leer. Para este caso un csv.</span>
+<span class="sd">        num_range (str): Indicamos el rango de registros que se trabajara, el formato para indicar dicho rango es [num_inicio]_[num_final], es importante separarlos por un guin bajo. Sino se tendra problemas.</span>
+<span class="sd">        path_export (str): Aqui indicamos la dirección de la carpeta donde se quiere exportar el archivo generado.</span>
+<span class="sd">        file_type (str): Aqui indicamos el tipo de archivo que se quiere descargar. De momento solo se tiene habilitado el formato .xlsx para exportar la información.</span>
+<span class="sd">        year (str): Indicamos el año de los registros que se estan trabajando.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="n">ReadsFiles</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span> <span class="o">=</span> <span class="n">path_export</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span> <span class="o">=</span> <span class="n">file_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+    
+<div class="viewcode-block" id="ScrapingMainSSI.read_file">
+<a class="viewcode-back" href="../../../sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.read_file">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ReadsFiles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">)</span><span class="o">.</span><span class="n">read_file_csv</span><span class="p">()</span></div>
+
+    
+<div class="viewcode-block" id="ScrapingMainSSI.scrape_info">
+<a class="viewcode-back" href="../../../sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.scrape_info">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scrape_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">lista_cui</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_file</span><span class="p">()</span>
+
+        <span class="c1"># -----------------------------------------------------------------------------------------</span>
+        <span class="c1"># ----------------------CREAMOS LAS LISTAS PARA ALMACENAR LA INFORMACIÓN-------------------</span>
+        <span class="c1"># -----------------------------------------------------------------------------------------</span>
+
+        <span class="c1">#--------------------DATOS GENERALES----------------------</span>
+        <span class="c1"># 0.- información general</span>
+        <span class="n">ssi_cui</span>              <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_snip</span>             <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fecha_registro</span>   <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_nombre_inversion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_estado</span>           <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_tipo_inversion</span>   <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_programa_pmi</span>     <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># 1.- institucionalidad</span>
+        <span class="n">ssi_opmi</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_uf</span>   <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_uei</span>  <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># 2.- datos de la fase ejecucion</span>
+        <span class="n">ssi_situacion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_decreto_emergencia</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_cadena_funcional</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_viabilidad_aprobacion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_costo_aprobado</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_beneficiarios</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_inicio_ejecucion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fin_ejecucion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># 3.- datos de la fase ejecucion</span>
+        <span class="n">ssi_expediente_tecnico</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_reg_seguimiento</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># ssi_inicio_ejecucion = []</span>
+        <span class="n">ssi_inversion_actualizado</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_sol_controversias</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_carta_fianza</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_inv_total</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># --------------------EJECUCION FINANCIERA----------------------</span>
+        <span class="n">ssi_cost_inversion</span>           <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_devengado_acumulado</span>      <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_avance_financiero_acum</span>   <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_saldo</span>                    <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fecha_primerdevengado</span>    <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fecha_ultimodevengado</span>    <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># --------------------CONTRATACIONES----------------------</span>
+        <span class="n">ssi_seaceobra</span>                <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seaceconsul</span>              <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seacebien</span>                <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seaceserv</span>                <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># ssi_contrato         = []</span>
+        <span class="c1"># ssi_contratista      = []</span>
+        <span class="c1"># ssi_n_contrato       = []</span>
+        <span class="c1"># ssi_fechasuscripcion = []</span>
+        <span class="c1"># ssi_monto_contrato   = []</span>
+        <span class="c1"># ssi_monto_item       = []</span>
+
+        <span class="n">r</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">one_cui</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista_cui</span><span class="p">)):</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;https://ofi5.mef.gob.pe/ssi/ssi/Index&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;txt_cu&quot;]&#39;</span><span class="p">,</span> <span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">])</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;divContainer&quot;]/div[1]/div[1]/div/table/tbody/tr[3]/td[1]/ul/li[1]/div/span&#39;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">present</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;divVistaPreliminar&quot;]/table[1]/tbody/tr[1]/td[1]&#39;</span><span class="p">):</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Se esta trabajando el registro </span><span class="si">{</span><span class="n">one_cui</span><span class="si">}</span><span class="s2"> con el CUI </span><span class="si">{</span><span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># --------------------DATOS GENERALES----------------------</span>
+            <span class="n">cui</span>                       <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_cu&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">snip</span>                      <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_snip&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fecha_registro</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_fecreg&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">nombre_inversion</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_nominv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">estado</span>                    <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_estcu&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">tipo_inversion</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_tipinv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">programa_pmi</span>              <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indpmi&quot;]&#39;</span><span class="p">)</span>
+            <span class="c1"># 1.- institucionalidad</span>
+            <span class="n">opmi</span>                      <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_opmi&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">uf</span>                        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_uf&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">uei</span>                       <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_uei&quot;]&#39;</span><span class="p">)</span>
+            <span class="c1"># 2.- datos de la fase ejecucion</span>
+            <span class="n">situacion</span>                 <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_situinv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">decreto_emergencia</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_emergds&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">cadena_funcional</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_cadfun&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">viabilidad_aprobacion</span>     <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_fecviab&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">costo_aprobado</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtoviab&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">beneficiarios</span>             <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_benif&quot;]&#39;</span><span class="p">)</span>
+            <span class="c1"># 3.- datos de la fase ejecucion</span>
+            <span class="n">expediente_tecnico</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indet&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">reg_seguimiento</span>           <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indseg&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">registro_cierre</span>           <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_f9&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">inicio_ejecucion</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;fec_iniejec&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fin_ejecucion</span>             <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;fec_finejec&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">inversion_actualizado</span>     <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;val_cta&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">sol_controversias</span>         <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_laudo&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">carta_fianza</span>              <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_carfza&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">inv_total</span>                 <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtototal&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="c1"># 1.1.-ALMACENAMOS la información en las listas</span>
+            <span class="n">ssi_cui</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cui</span><span class="p">)</span>
+            <span class="n">ssi_snip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">snip</span><span class="p">)</span> 
+            <span class="n">ssi_fecha_registro</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fecha_registro</span><span class="p">)</span> 
+            <span class="n">ssi_nombre_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nombre_inversion</span><span class="p">)</span> 
+            <span class="n">ssi_estado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span> 
+            <span class="n">ssi_tipo_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tipo_inversion</span><span class="p">)</span> 
+            <span class="n">ssi_programa_pmi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">programa_pmi</span><span class="p">)</span> 
+            <span class="n">ssi_opmi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">opmi</span><span class="p">)</span> 
+            <span class="n">ssi_uf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uf</span><span class="p">)</span> 
+            <span class="n">ssi_uei</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uei</span><span class="p">)</span> 
+            <span class="n">ssi_situacion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">situacion</span><span class="p">)</span> 
+            <span class="n">ssi_decreto_emergencia</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">decreto_emergencia</span><span class="p">)</span> 
+            <span class="n">ssi_cadena_funcional</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cadena_funcional</span><span class="p">)</span> 
+            <span class="n">ssi_viabilidad_aprobacion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">viabilidad_aprobacion</span><span class="p">)</span> 
+            <span class="n">ssi_costo_aprobado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">costo_aprobado</span><span class="p">)</span> 
+            <span class="n">ssi_beneficiarios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">beneficiarios</span><span class="p">)</span> 
+            <span class="n">ssi_expediente_tecnico</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">expediente_tecnico</span><span class="p">)</span> 
+            <span class="n">ssi_reg_seguimiento</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reg_seguimiento</span><span class="p">)</span> 
+            <span class="n">ssi_inicio_ejecucion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inicio_ejecucion</span><span class="p">)</span>
+            <span class="n">ssi_fin_ejecucion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fin_ejecucion</span><span class="p">)</span>
+            <span class="n">ssi_inversion_actualizado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inversion_actualizado</span><span class="p">)</span> 
+            <span class="n">ssi_sol_controversias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol_controversias</span><span class="p">)</span> 
+            <span class="n">ssi_carta_fianza</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">carta_fianza</span><span class="p">)</span> 
+            <span class="n">ssi_inv_total</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inv_total</span><span class="p">)</span> 
+
+            <span class="c1"># --------------------EJECUCION FINANCIERA----------------------</span>
+            <span class="c1"># pasamos a la seccion ejecucion financiera</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;img_financ&quot;]&#39;</span><span class="p">)</span>
+            <span class="c1"># scrapeamos la información</span>
+            <span class="n">cost_inversion</span>               <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtototal2&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">devengado_acumulado</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;val_efin&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">avance_financiero_acum</span>       <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;por_avanacum&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">saldo</span>                        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;sdo_ejecacum&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fecha_primerdevengado</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;pridev&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fecha_ultimodevengado</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;ultdev&quot;]&#39;</span><span class="p">)</span>
+            <span class="c1"># agregamos a las listas de información</span>
+            <span class="n">ssi_cost_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cost_inversion</span><span class="p">)</span>
+            <span class="n">ssi_devengado_acumulado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">devengado_acumulado</span><span class="p">)</span>
+            <span class="n">ssi_avance_financiero_acum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">avance_financiero_acum</span><span class="p">)</span>
+            <span class="n">ssi_saldo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saldo</span><span class="p">)</span>
+            <span class="n">ssi_fecha_primerdevengado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fecha_primerdevengado</span><span class="p">)</span>
+            <span class="n">ssi_fecha_ultimodevengado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fecha_ultimodevengado</span><span class="p">)</span>
+
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+            <span class="c1"># --------------------CONTRATACIONES----------------------</span>
+            <span class="c1"># pasamos a la seccion de contrataciones</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;btn_seace&quot;]&#39;</span><span class="p">)</span>
+            <span class="c1"># scraping de la información</span>
+            <span class="n">seaceobra</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceobra&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seaceconsul</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceconsul&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seacebien</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seacebien&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seaceserv</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceserv&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="c1">#     contrato           = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[2]&#39;)</span>
+            <span class="c1">#     contratista        = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[3]&#39;)</span>
+            <span class="c1">#     n_contrato         = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[4]&#39;)</span>
+            <span class="c1">#     fechasuscripcion   = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[5]&#39;)</span>
+            <span class="c1">#     monto_contrato     = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[6]&#39;)</span>
+            <span class="c1">#     monto_item         = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[7]&#39;)</span>
+
+            <span class="c1"># agregamos la informacion a las listas</span>
+            <span class="n">ssi_seaceobra</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seaceobra</span><span class="p">)</span>
+            <span class="n">ssi_seaceconsul</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seaceconsul</span><span class="p">)</span>
+            <span class="n">ssi_seacebien</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seacebien</span><span class="p">)</span>
+            <span class="n">ssi_seaceserv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seaceserv</span><span class="p">)</span>
+
+            <span class="c1">#     ssi_contrato.append(contrato)</span>
+            <span class="c1">#     ssi_contratista.append(contratista)</span>
+            <span class="c1">#     ssi_n_contrato.append(n_contrato)</span>
+            <span class="c1">#     ssi_fechasuscripcion.append(fechasuscripcion)</span>
+            <span class="c1">#     ssi_monto_contrato.append(monto_contrato)</span>
+            <span class="c1">#     ssi_monto_item.append(monto_item)</span>
+        
+        <span class="n">r</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="c1"># Datos generales</span>
+            <span class="n">ssi_cui</span><span class="p">,</span>
+            <span class="n">ssi_snip</span><span class="p">,</span>
+            <span class="n">ssi_fecha_registro</span><span class="p">,</span>
+            <span class="n">ssi_nombre_inversion</span><span class="p">,</span>
+            <span class="n">ssi_estado</span><span class="p">,</span>
+            <span class="n">ssi_tipo_inversion</span><span class="p">,</span>
+            <span class="n">ssi_programa_pmi</span><span class="p">,</span>
+            <span class="n">ssi_opmi</span><span class="p">,</span>
+            <span class="n">ssi_uf</span><span class="p">,</span>
+            <span class="n">ssi_uei</span><span class="p">,</span>
+            <span class="n">ssi_situacion</span><span class="p">,</span>
+            <span class="n">ssi_decreto_emergencia</span><span class="p">,</span>
+            <span class="n">ssi_cadena_funcional</span><span class="p">,</span>
+            <span class="n">ssi_viabilidad_aprobacion</span><span class="p">,</span>
+            <span class="n">ssi_costo_aprobado</span><span class="p">,</span>
+            <span class="n">ssi_beneficiarios</span><span class="p">,</span>
+            <span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
+            <span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
+            <span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
+            <span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
+            <span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
+            <span class="n">ssi_sol_controversias</span><span class="p">,</span>
+            <span class="n">ssi_carta_fianza</span><span class="p">,</span>
+            <span class="n">ssi_inv_total</span><span class="p">,</span>
+            <span class="c1"># Ejecución financiera</span>
+            <span class="n">ssi_cost_inversion</span><span class="p">,</span>
+            <span class="n">ssi_devengado_acumulado</span><span class="p">,</span>
+            <span class="n">ssi_avance_financiero_acum</span><span class="p">,</span>
+            <span class="n">ssi_saldo</span><span class="p">,</span>
+            <span class="n">ssi_fecha_primerdevengado</span><span class="p">,</span>
+            <span class="n">ssi_fecha_ultimodevengado</span><span class="p">,</span>
+            <span class="c1"># Contrataciones</span>
+            <span class="n">ssi_seaceobra</span><span class="p">,</span>
+            <span class="n">ssi_seaceconsul</span><span class="p">,</span>
+            <span class="n">ssi_seacebien</span><span class="p">,</span>
+            <span class="n">ssi_seaceserv</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ScrapingMainSSI.download_data">
+<a class="viewcode-back" href="../../../sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.download_data">[documentos]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">download_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">(</span>
+            <span class="c1"># Datos generales</span>
+            <span class="n">ssi_cui</span><span class="p">,</span>
+            <span class="n">ssi_snip</span><span class="p">,</span>
+            <span class="n">ssi_fecha_registro</span><span class="p">,</span>
+            <span class="n">ssi_nombre_inversion</span><span class="p">,</span>
+            <span class="n">ssi_estado</span><span class="p">,</span>
+            <span class="n">ssi_tipo_inversion</span><span class="p">,</span>
+            <span class="n">ssi_programa_pmi</span><span class="p">,</span>
+            <span class="n">ssi_opmi</span><span class="p">,</span>
+            <span class="n">ssi_uf</span><span class="p">,</span>
+            <span class="n">ssi_uei</span><span class="p">,</span>
+            <span class="n">ssi_situacion</span><span class="p">,</span>
+            <span class="n">ssi_decreto_emergencia</span><span class="p">,</span>
+            <span class="n">ssi_cadena_funcional</span><span class="p">,</span>
+            <span class="n">ssi_viabilidad_aprobacion</span><span class="p">,</span>
+            <span class="n">ssi_costo_aprobado</span><span class="p">,</span>
+            <span class="n">ssi_beneficiarios</span><span class="p">,</span>
+            <span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
+            <span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
+            <span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
+            <span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
+            <span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
+            <span class="n">ssi_sol_controversias</span><span class="p">,</span>
+            <span class="n">ssi_carta_fianza</span><span class="p">,</span>
+            <span class="n">ssi_inv_total</span><span class="p">,</span>
+            <span class="c1"># Ejecución financiera</span>
+            <span class="n">ssi_cost_inversion</span><span class="p">,</span>
+            <span class="n">ssi_devengado_acumulado</span><span class="p">,</span>
+            <span class="n">ssi_avance_financiero_acum</span><span class="p">,</span>
+            <span class="n">ssi_saldo</span><span class="p">,</span>
+            <span class="n">ssi_fecha_primerdevengado</span><span class="p">,</span>
+            <span class="n">ssi_fecha_ultimodevengado</span><span class="p">,</span>
+            <span class="c1"># Contrataciones</span>
+            <span class="n">ssi_seaceobra</span><span class="p">,</span>
+            <span class="n">ssi_seaceconsul</span><span class="p">,</span>
+            <span class="n">ssi_seacebien</span><span class="p">,</span>
+            <span class="n">ssi_seaceserv</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scrape_info</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;El total de CUIs scrapeados es: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ssi_cui</span><span class="p">)</span><span class="si">}</span><span class="s2"> y se esta exportando a Excel&quot;</span>
+        <span class="p">)</span>
+        <span class="n">ssi_mainssi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="c1"># Datos generales - dg</span>
+                <span class="s2">&quot;dg_cui&quot;</span><span class="p">:</span><span class="n">ssi_cui</span><span class="p">,</span>
+                <span class="s2">&quot;dg_codio_snip&quot;</span><span class="p">:</span><span class="n">ssi_snip</span><span class="p">,</span>
+                <span class="s2">&quot;dg_fecha_registro&quot;</span><span class="p">:</span><span class="n">ssi_fecha_registro</span><span class="p">,</span>
+                <span class="s2">&quot;dg_nombre_inversion&quot;</span><span class="p">:</span><span class="n">ssi_nombre_inversion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_estado_inversion&quot;</span><span class="p">:</span><span class="n">ssi_estado</span><span class="p">,</span>
+                <span class="s2">&quot;dg_tipo_inversion&quot;</span><span class="p">:</span><span class="n">ssi_tipo_inversion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_programado_pmi&quot;</span><span class="p">:</span><span class="n">ssi_programa_pmi</span><span class="p">,</span>
+                <span class="s2">&quot;dg_opmi&quot;</span><span class="p">:</span><span class="n">ssi_opmi</span><span class="p">,</span>
+                <span class="s2">&quot;dg_uf&quot;</span><span class="p">:</span><span class="n">ssi_uf</span><span class="p">,</span>
+                <span class="s2">&quot;dg_uei&quot;</span><span class="p">:</span><span class="n">ssi_uei</span><span class="p">,</span>
+                <span class="s2">&quot;dg_situcion&quot;</span><span class="p">:</span><span class="n">ssi_situacion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_decreto_emergencia&quot;</span><span class="p">:</span><span class="n">ssi_decreto_emergencia</span><span class="p">,</span>
+                <span class="s2">&quot;dg_cadena_funcional&quot;</span><span class="p">:</span><span class="n">ssi_cadena_funcional</span><span class="p">,</span>
+                <span class="s2">&quot;dg_fecha_viabilidad&quot;</span><span class="p">:</span><span class="n">ssi_viabilidad_aprobacion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_costo_inversion_aprobado&quot;</span><span class="p">:</span><span class="n">ssi_costo_aprobado</span><span class="p">,</span>
+                <span class="s2">&quot;dg_numero_beneficiarios&quot;</span><span class="p">:</span><span class="n">ssi_beneficiarios</span><span class="p">,</span>
+                <span class="s2">&quot;dg_expediente_tecnico&quot;</span><span class="p">:</span><span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
+                <span class="s2">&quot;dg_registro_seguimiento&quot;</span><span class="p">:</span><span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
+                <span class="s2">&quot;dg_inicio_ejecucion&quot;</span><span class="p">:</span><span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_fin_ejecucion&quot;</span><span class="p">:</span><span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_inversion_actualizada&quot;</span><span class="p">:</span><span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
+                <span class="s2">&quot;dg_costo_controversias&quot;</span><span class="p">:</span><span class="n">ssi_sol_controversias</span><span class="p">,</span>
+                <span class="s2">&quot;dg_monto_carta_fianza&quot;</span><span class="p">:</span><span class="n">ssi_carta_fianza</span><span class="p">,</span>
+                <span class="s2">&quot;dg_costo_total_actualizado&quot;</span><span class="p">:</span><span class="n">ssi_inv_total</span><span class="p">,</span>
+                <span class="c1"># Ejecución financiera</span>
+                <span class="s2">&quot;fin_costo_total_actualizado&quot;</span><span class="p">:</span><span class="n">ssi_cost_inversion</span><span class="p">,</span>
+                <span class="s2">&quot;fin_devengado_acumulado&quot;</span><span class="p">:</span><span class="n">ssi_devengado_acumulado</span><span class="p">,</span>
+                <span class="s2">&quot;fin_avance_financiero_acumulado&quot;</span><span class="p">:</span><span class="n">ssi_avance_financiero_acum</span><span class="p">,</span>
+                <span class="s2">&quot;fin_saldo_por_ejecutar&quot;</span><span class="p">:</span><span class="n">ssi_saldo</span><span class="p">,</span>
+                <span class="s2">&quot;fin_fecha_primer_devengado&quot;</span><span class="p">:</span><span class="n">ssi_fecha_primerdevengado</span><span class="p">,</span>
+                <span class="s2">&quot;fin_fecha_ultimo_devengado&quot;</span><span class="p">:</span><span class="n">ssi_fecha_ultimodevengado</span><span class="p">,</span>
+                <span class="c1"># Contrataciones</span>
+                <span class="s2">&quot;seaceobra&quot;</span><span class="p">:</span><span class="n">ssi_seaceobra</span><span class="p">,</span>
+                <span class="s2">&quot;seaceconsul&quot;</span><span class="p">:</span><span class="n">ssi_seaceconsul</span><span class="p">,</span>
+                <span class="s2">&quot;seacebien&quot;</span><span class="p">:</span><span class="n">ssi_seacebien</span><span class="p">,</span>
+                <span class="s2">&quot;seaceserv&quot;</span><span class="p">:</span><span class="n">ssi_seaceserv</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">ssi_mainssi</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="si">}</span><span class="s2">/ssi_SSI_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2">_regts_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Jelsin Palomino
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Jelsin Palomino.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
