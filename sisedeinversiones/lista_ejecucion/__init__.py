@@ -21,6 +21,6 @@ de los proyectos.
 
 """
 
-__all__=['lista_ejecucion_simple']
+__all__ = ["lista_ejecucion_simple"]
 
 # from . import general

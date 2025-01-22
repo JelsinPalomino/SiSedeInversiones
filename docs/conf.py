@@ -1,12 +1,12 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath(".."))
 
-project = 'SiSedeInversiones'
-copyright = '2025, Jelsin Palomino'
-author = 'Jelsin Palomino'
-release = 'v0.0.1'
+project = "SiSedeInversiones"
+copyright = "2025, Jelsin Palomino"
+author = "Jelsin Palomino"
+release = "v0.0.1"
 
 extensions_part1 = ["sphinx.ext.autodoc", "sphinx.ext.viewcode"]
 extensions_part2 = ["sphinx.ext.napoleon"]
@@ -26,7 +26,6 @@ html_theme_options = {
 }
 html_logo = "logo.jpg"
 html_title = "SiSedeInversiones - v0.0.1"
-
 
 
 # autoclass_content = "both"

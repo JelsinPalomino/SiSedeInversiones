@@ -62,6 +62,7 @@ Sección: Datos de la fase de Formulación y Evaluación, modificados en la fase
 
 
 """
-__all__=['eight']
+
+__all__ = ["eight"]
 
 # from . import eight

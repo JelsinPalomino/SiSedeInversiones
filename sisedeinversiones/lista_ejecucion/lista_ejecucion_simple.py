@@ -6,12 +6,12 @@
 import time
 
 import pandas as pd
-from ..utils.read_utils import ReadsFiles
 import rpa as r
+
+from ..utils.read_utils import ReadsFiles
 
 
 class ScrapingListaEjecucion(ReadsFiles):
-
     """_summary_
 
     Args:
@@ -21,9 +21,9 @@ class ScrapingListaEjecucion(ReadsFiles):
         file_type (str): Aqui indicamos el tipo de archivo que se quiere descargar. De momento solo se tiene habilitado el formato .xlsx para exportar la información.
         year (str): Indicamos el año de los registros que se estan trabajando.
     """
+
     def __init__(self, file_read, num_range, path_export, file_type, year):
-        ReadsFiles.__init__(self, file_read = file_read, 
-                         num_range = num_range)
+        ReadsFiles.__init__(self, file_read=file_read, num_range=num_range)
         self.path_export: str = path_export
         self.file_type: str = file_type
         self.year: str = year
@@ -35,7 +35,6 @@ class ScrapingListaEjecucion(ReadsFiles):
             list: Lista de los CUI's que se trabajaran
         """
         return ReadsFiles(self.file_read, self.num_range).read_file_csv()
-
 
     def scrape_info(self):
         """Este método se encarga de automatizar el proceso de extracción de los datos
@@ -51,16 +50,16 @@ class ScrapingListaEjecucion(ReadsFiles):
         # ---------------------------------------------------------------------
 
         # Datos generales
-        ssi_cui                      = []
-        ssi_pip                      = []
-        ssi_monto_inversion          = []
-        ssi_monto_actualizado        = []
+        ssi_cui = []
+        ssi_pip = []
+        ssi_monto_inversion = []
+        ssi_monto_actualizado = []
         # Lista de modificaciones en Fase de Ejecución
         ssi_fecha_ultimamodificacion = []
-        ssi_comentarios              = []
-        ssi_usuario                  = []
-        ssi_tipo_documento           = []
-        ssi_historico                = []
+        ssi_comentarios = []
+        ssi_usuario = []
+        ssi_tipo_documento = []
+        ssi_historico = []
 
         # --------------------------------
         # ---- Comenzamos el scraping ----
@@ -85,20 +84,40 @@ class ScrapingListaEjecucion(ReadsFiles):
                 f"Se esta trabajando el regtistro {one_cui} con el CUI {lista_cui[one_cui]} y el elemento existe {element_exist}"
             )
             # Datos generales del proyecto o inversión
-            cui                      = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[2]/div[2]')
-            pip                      = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[3]/div[2]')
-            monto_inversion          = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[4]/div[2]')
-            monto_actualizado        = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[5]/div[2]')
+            cui = r.read(
+                '//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[2]/div[2]'
+            )
+            pip = r.read(
+                '//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[3]/div[2]'
+            )
+            monto_inversion = r.read(
+                '//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[4]/div[2]'
+            )
+            monto_actualizado = r.read(
+                '//*[@id="main-container"]/div[1]/div/div/div/div/div[1]/div[5]/div[2]'
+            )
             # Lista de modificaciones en Fase de Ejecución
 
-            if r.present('//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody'):
+            if r.present(
+                '//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody'
+            ):
                 time.sleep(1)
-                fecha_ultimamodificacion = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[1]')
-                comentarios              = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[3]')
-                usuario                  = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[4]')
-                tipo_documento           = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[5]')
-                historico                = r.read('//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[6]')
-                
+                fecha_ultimamodificacion = r.read(
+                    '//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[1]'
+                )
+                comentarios = r.read(
+                    '//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[3]'
+                )
+                usuario = r.read(
+                    '//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[4]'
+                )
+                tipo_documento = r.read(
+                    '//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[5]'
+                )
+                historico = r.read(
+                    '//*[@id="main-container"]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[6]'
+                )
+
             else:
                 fecha_ultimamodificacion = "0"
                 comentarios = "0"
@@ -115,7 +134,7 @@ class ScrapingListaEjecucion(ReadsFiles):
             ssi_usuario.append(usuario)
             ssi_tipo_documento.append(tipo_documento)
             ssi_historico.append(historico)
-        
+
         time.sleep(1)
         r.close()
         time.sleep(2)
@@ -136,7 +155,7 @@ class ScrapingListaEjecucion(ReadsFiles):
         """Aqui exportamos la información reunida con el metodo scrape_info()
 
         Returns:
-            xlsx: Se recibe la tupla que luego se exporta en formato .xslx 
+            xlsx: Se recibe la tupla que luego se exporta en formato .xslx
         """
         (
             ssi_cui,
