@@ -5,9 +5,11 @@
 """
 
 import time
-from ..utils.read_utils import ReadsFiles
+
 import pandas as pd
 import rpa as r
+
+from ..utils.read_utils import ReadsFiles
 
 
 class ScrapingEight(ReadsFiles):
@@ -20,9 +22,9 @@ class ScrapingEight(ReadsFiles):
         file_type (_type_): This is the type of file you want to export. At the moment it is programmed to generate .xlsx files.
         year (_type_): Indicate the year of the records, this information will be used to generate the name of the .xlsx file that will be exported with the collected information.
     """
+
     def __init__(self, file_read, num_range, path_export, file_type, year):
-        ReadsFiles.__init__(self, file_read = file_read, 
-                         num_range = num_range)
+        ReadsFiles.__init__(self, file_read=file_read, num_range=num_range)
         self.path_export: str = path_export
         self.file_type: str = file_type
         self.year: str = year
@@ -37,7 +39,7 @@ class ScrapingEight(ReadsFiles):
 
     def scrape_info(self):
         """_summary_
-        
+
         Returns:
             _type_: _description_
         """
