@@ -300,9 +300,10 @@
 
 <span class="sd">&quot;&quot;&quot;</span>
 
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">rpa</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">r</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">..utils.read_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReadsFiles</span>
 
@@ -319,18 +320,19 @@
 <span class="sd">        file_type (str): Aqui indicamos el tipo de archivo que se quiere descargar. De momento solo se tiene habilitado el formato .xlsx para exportar la información.</span>
 <span class="sd">        year (str): Indicamos el año de los registros que se estan trabajando.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
         <span class="n">ReadsFiles</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span> <span class="o">=</span> <span class="n">path_export</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span> <span class="o">=</span> <span class="n">file_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
-    
+
 <div class="viewcode-block" id="ScrapingMainSSI.read_file">
 <a class="viewcode-back" href="../../../sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.read_file">[documentos]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">read_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ReadsFiles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">)</span><span class="o">.</span><span class="n">read_file_csv</span><span class="p">()</span></div>
 
-    
+
 <div class="viewcode-block" id="ScrapingMainSSI.scrape_info">
 <a class="viewcode-back" href="../../../sisedeinversiones.ssi.main_ssi.html#sisedeinversiones.ssi.main_ssi.ScrapingMainSSI.scrape_info">[documentos]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">scrape_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -340,19 +342,19 @@
         <span class="c1"># ----------------------CREAMOS LAS LISTAS PARA ALMACENAR LA INFORMACIÓN-------------------</span>
         <span class="c1"># -----------------------------------------------------------------------------------------</span>
 
-        <span class="c1">#--------------------DATOS GENERALES----------------------</span>
+        <span class="c1"># --------------------DATOS GENERALES----------------------</span>
         <span class="c1"># 0.- información general</span>
-        <span class="n">ssi_cui</span>              <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_snip</span>             <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_fecha_registro</span>   <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_cui</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_snip</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fecha_registro</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">ssi_nombre_inversion</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_estado</span>           <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_tipo_inversion</span>   <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_programa_pmi</span>     <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_estado</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_tipo_inversion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_programa_pmi</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># 1.- institucionalidad</span>
         <span class="n">ssi_opmi</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_uf</span>   <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_uei</span>  <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_uf</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_uei</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># 2.- datos de la fase ejecucion</span>
         <span class="n">ssi_situacion</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">ssi_decreto_emergencia</span> <span class="o">=</span> <span class="p">[]</span>
@@ -365,6 +367,7 @@
         <span class="c1"># 3.- datos de la fase ejecucion</span>
         <span class="n">ssi_expediente_tecnico</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">ssi_reg_seguimiento</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_registro_cierre</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># ssi_inicio_ejecucion = []</span>
         <span class="n">ssi_inversion_actualizado</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">ssi_sol_controversias</span> <span class="o">=</span> <span class="p">[]</span>
@@ -372,18 +375,18 @@
         <span class="n">ssi_inv_total</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># --------------------EJECUCION FINANCIERA----------------------</span>
-        <span class="n">ssi_cost_inversion</span>           <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_devengado_acumulado</span>      <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_avance_financiero_acum</span>   <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_saldo</span>                    <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_fecha_primerdevengado</span>    <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_fecha_ultimodevengado</span>    <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_cost_inversion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_devengado_acumulado</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_avance_financiero_acum</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_saldo</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fecha_primerdevengado</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_fecha_ultimodevengado</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># --------------------CONTRATACIONES----------------------</span>
-        <span class="n">ssi_seaceobra</span>                <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_seaceconsul</span>              <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_seacebien</span>                <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_seaceserv</span>                <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seaceobra</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seaceconsul</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seacebien</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_seaceserv</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># ssi_contrato         = []</span>
         <span class="c1"># ssi_contratista      = []</span>
@@ -398,80 +401,87 @@
             <span class="n">r</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;https://ofi5.mef.gob.pe/ssi/ssi/Index&quot;</span><span class="p">)</span>
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
             <span class="n">r</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;txt_cu&quot;]&#39;</span><span class="p">,</span> <span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">])</span>
-            <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;divContainer&quot;]/div[1]/div[1]/div/table/tbody/tr[3]/td[1]/ul/li[1]/div/span&#39;</span><span class="p">)</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;divContainer&quot;]/div[1]/div[1]/div/table/tbody/tr[3]/td[1]/ul/li[1]/div/span&#39;</span>
+            <span class="p">)</span>
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">present</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;divVistaPreliminar&quot;]/table[1]/tbody/tr[1]/td[1]&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">present</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;divVistaPreliminar&quot;]/table[1]/tbody/tr[1]/td[1]&#39;</span>
+            <span class="p">):</span>
                 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Se esta trabajando el registro </span><span class="si">{</span><span class="n">one_cui</span><span class="si">}</span><span class="s2"> con el CUI </span><span class="si">{</span><span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Se esta trabajando el registro </span><span class="si">{</span><span class="n">one_cui</span><span class="si">}</span><span class="s2"> con el CUI </span><span class="si">{</span><span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
 
             <span class="c1"># --------------------DATOS GENERALES----------------------</span>
-            <span class="n">cui</span>                       <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_cu&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">snip</span>                      <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_snip&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">fecha_registro</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_fecreg&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">nombre_inversion</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_nominv&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">estado</span>                    <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_estcu&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">tipo_inversion</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_tipinv&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">programa_pmi</span>              <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indpmi&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">cui</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_cu&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">snip</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_snip&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fecha_registro</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_fecreg&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">nombre_inversion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_nominv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">estado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_estcu&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">tipo_inversion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_tipinv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">programa_pmi</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indpmi&quot;]&#39;</span><span class="p">)</span>
             <span class="c1"># 1.- institucionalidad</span>
-            <span class="n">opmi</span>                      <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_opmi&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">uf</span>                        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_uf&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">uei</span>                       <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_uei&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">opmi</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_opmi&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">uf</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_uf&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">uei</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_uei&quot;]&#39;</span><span class="p">)</span>
             <span class="c1"># 2.- datos de la fase ejecucion</span>
-            <span class="n">situacion</span>                 <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_situinv&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">decreto_emergencia</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_emergds&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">cadena_funcional</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_cadfun&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">viabilidad_aprobacion</span>     <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_fecviab&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">costo_aprobado</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtoviab&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">beneficiarios</span>             <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_benif&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">situacion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_situinv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">decreto_emergencia</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_emergds&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">cadena_funcional</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_cadfun&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">viabilidad_aprobacion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_fecviab&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">costo_aprobado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtoviab&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">beneficiarios</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_benif&quot;]&#39;</span><span class="p">)</span>
             <span class="c1"># 3.- datos de la fase ejecucion</span>
-            <span class="n">expediente_tecnico</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indet&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">reg_seguimiento</span>           <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indseg&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">registro_cierre</span>           <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_f9&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">inicio_ejecucion</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;fec_iniejec&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">fin_ejecucion</span>             <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;fec_finejec&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">inversion_actualizado</span>     <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;val_cta&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">sol_controversias</span>         <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_laudo&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">carta_fianza</span>              <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_carfza&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">inv_total</span>                 <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtototal&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">expediente_tecnico</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indet&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">reg_seguimiento</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_indseg&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">registro_cierre</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_f9&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">inicio_ejecucion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;fec_iniejec&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fin_ejecucion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;fec_finejec&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">inversion_actualizado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;val_cta&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">sol_controversias</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_laudo&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">carta_fianza</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_carfza&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">inv_total</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtototal&quot;]&#39;</span><span class="p">)</span>
 
             <span class="c1"># 1.1.-ALMACENAMOS la información en las listas</span>
             <span class="n">ssi_cui</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cui</span><span class="p">)</span>
-            <span class="n">ssi_snip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">snip</span><span class="p">)</span> 
-            <span class="n">ssi_fecha_registro</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fecha_registro</span><span class="p">)</span> 
-            <span class="n">ssi_nombre_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nombre_inversion</span><span class="p">)</span> 
-            <span class="n">ssi_estado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span> 
-            <span class="n">ssi_tipo_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tipo_inversion</span><span class="p">)</span> 
-            <span class="n">ssi_programa_pmi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">programa_pmi</span><span class="p">)</span> 
-            <span class="n">ssi_opmi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">opmi</span><span class="p">)</span> 
-            <span class="n">ssi_uf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uf</span><span class="p">)</span> 
-            <span class="n">ssi_uei</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uei</span><span class="p">)</span> 
-            <span class="n">ssi_situacion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">situacion</span><span class="p">)</span> 
-            <span class="n">ssi_decreto_emergencia</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">decreto_emergencia</span><span class="p">)</span> 
-            <span class="n">ssi_cadena_funcional</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cadena_funcional</span><span class="p">)</span> 
-            <span class="n">ssi_viabilidad_aprobacion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">viabilidad_aprobacion</span><span class="p">)</span> 
-            <span class="n">ssi_costo_aprobado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">costo_aprobado</span><span class="p">)</span> 
-            <span class="n">ssi_beneficiarios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">beneficiarios</span><span class="p">)</span> 
-            <span class="n">ssi_expediente_tecnico</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">expediente_tecnico</span><span class="p">)</span> 
-            <span class="n">ssi_reg_seguimiento</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reg_seguimiento</span><span class="p">)</span> 
+            <span class="n">ssi_snip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">snip</span><span class="p">)</span>
+            <span class="n">ssi_fecha_registro</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fecha_registro</span><span class="p">)</span>
+            <span class="n">ssi_nombre_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nombre_inversion</span><span class="p">)</span>
+            <span class="n">ssi_estado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>
+            <span class="n">ssi_tipo_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tipo_inversion</span><span class="p">)</span>
+            <span class="n">ssi_programa_pmi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">programa_pmi</span><span class="p">)</span>
+            <span class="n">ssi_opmi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">opmi</span><span class="p">)</span>
+            <span class="n">ssi_uf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uf</span><span class="p">)</span>
+            <span class="n">ssi_uei</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">uei</span><span class="p">)</span>
+            <span class="n">ssi_situacion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">situacion</span><span class="p">)</span>
+            <span class="n">ssi_decreto_emergencia</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">decreto_emergencia</span><span class="p">)</span>
+            <span class="n">ssi_cadena_funcional</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cadena_funcional</span><span class="p">)</span>
+            <span class="n">ssi_viabilidad_aprobacion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">viabilidad_aprobacion</span><span class="p">)</span>
+            <span class="n">ssi_costo_aprobado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">costo_aprobado</span><span class="p">)</span>
+            <span class="n">ssi_beneficiarios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">beneficiarios</span><span class="p">)</span>
+            <span class="n">ssi_expediente_tecnico</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">expediente_tecnico</span><span class="p">)</span>
+            <span class="n">ssi_reg_seguimiento</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reg_seguimiento</span><span class="p">)</span>
+            <span class="n">ssi_registro_cierre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">registro_cierre</span><span class="p">)</span>
             <span class="n">ssi_inicio_ejecucion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inicio_ejecucion</span><span class="p">)</span>
             <span class="n">ssi_fin_ejecucion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fin_ejecucion</span><span class="p">)</span>
-            <span class="n">ssi_inversion_actualizado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inversion_actualizado</span><span class="p">)</span> 
-            <span class="n">ssi_sol_controversias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol_controversias</span><span class="p">)</span> 
-            <span class="n">ssi_carta_fianza</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">carta_fianza</span><span class="p">)</span> 
-            <span class="n">ssi_inv_total</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inv_total</span><span class="p">)</span> 
+            <span class="n">ssi_inversion_actualizado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inversion_actualizado</span><span class="p">)</span>
+            <span class="n">ssi_sol_controversias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol_controversias</span><span class="p">)</span>
+            <span class="n">ssi_carta_fianza</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">carta_fianza</span><span class="p">)</span>
+            <span class="n">ssi_inv_total</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inv_total</span><span class="p">)</span>
 
             <span class="c1"># --------------------EJECUCION FINANCIERA----------------------</span>
             <span class="c1"># pasamos a la seccion ejecucion financiera</span>
             <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;img_financ&quot;]&#39;</span><span class="p">)</span>
             <span class="c1"># scrapeamos la información</span>
-            <span class="n">cost_inversion</span>               <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtototal2&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">devengado_acumulado</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;val_efin&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">avance_financiero_acum</span>       <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;por_avanacum&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">saldo</span>                        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;sdo_ejecacum&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">fecha_primerdevengado</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;pridev&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">fecha_ultimodevengado</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;ultdev&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">cost_inversion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;td_mtototal2&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">devengado_acumulado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;val_efin&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">avance_financiero_acum</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;por_avanacum&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">saldo</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;sdo_ejecacum&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fecha_primerdevengado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;pridev&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">fecha_ultimodevengado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;ultdev&quot;]&#39;</span><span class="p">)</span>
             <span class="c1"># agregamos a las listas de información</span>
             <span class="n">ssi_cost_inversion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cost_inversion</span><span class="p">)</span>
             <span class="n">ssi_devengado_acumulado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">devengado_acumulado</span><span class="p">)</span>
@@ -486,10 +496,10 @@
             <span class="c1"># pasamos a la seccion de contrataciones</span>
             <span class="n">r</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;btn_seace&quot;]&#39;</span><span class="p">)</span>
             <span class="c1"># scraping de la información</span>
-            <span class="n">seaceobra</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceobra&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">seaceconsul</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceconsul&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">seacebien</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seacebien&quot;]&#39;</span><span class="p">)</span>
-            <span class="n">seaceserv</span>            <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceserv&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seaceobra</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceobra&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seaceconsul</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceconsul&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seacebien</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seacebien&quot;]&#39;</span><span class="p">)</span>
+            <span class="n">seaceserv</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;tb_seaceserv&quot;]&#39;</span><span class="p">)</span>
 
             <span class="c1">#     contrato           = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[2]&#39;)</span>
             <span class="c1">#     contratista        = r.read(&#39;//*[@id=&quot;tb_seaceserv&quot;]/tr/td[3]&#39;)</span>
@@ -510,7 +520,7 @@
             <span class="c1">#     ssi_fechasuscripcion.append(fechasuscripcion)</span>
             <span class="c1">#     ssi_monto_contrato.append(monto_contrato)</span>
             <span class="c1">#     ssi_monto_item.append(monto_item)</span>
-        
+
         <span class="n">r</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
         <span class="k">return</span> <span class="p">(</span>
@@ -533,6 +543,7 @@
             <span class="n">ssi_beneficiarios</span><span class="p">,</span>
             <span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
             <span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
+            <span class="n">ssi_registro_cierre</span><span class="p">,</span>
             <span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
             <span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
             <span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
@@ -577,6 +588,7 @@
             <span class="n">ssi_beneficiarios</span><span class="p">,</span>
             <span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
             <span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
+            <span class="n">ssi_registro_cierre</span><span class="p">,</span>
             <span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
             <span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
             <span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
@@ -602,42 +614,43 @@
         <span class="n">ssi_mainssi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
             <span class="p">{</span>
                 <span class="c1"># Datos generales - dg</span>
-                <span class="s2">&quot;dg_cui&quot;</span><span class="p">:</span><span class="n">ssi_cui</span><span class="p">,</span>
-                <span class="s2">&quot;dg_codio_snip&quot;</span><span class="p">:</span><span class="n">ssi_snip</span><span class="p">,</span>
-                <span class="s2">&quot;dg_fecha_registro&quot;</span><span class="p">:</span><span class="n">ssi_fecha_registro</span><span class="p">,</span>
-                <span class="s2">&quot;dg_nombre_inversion&quot;</span><span class="p">:</span><span class="n">ssi_nombre_inversion</span><span class="p">,</span>
-                <span class="s2">&quot;dg_estado_inversion&quot;</span><span class="p">:</span><span class="n">ssi_estado</span><span class="p">,</span>
-                <span class="s2">&quot;dg_tipo_inversion&quot;</span><span class="p">:</span><span class="n">ssi_tipo_inversion</span><span class="p">,</span>
-                <span class="s2">&quot;dg_programado_pmi&quot;</span><span class="p">:</span><span class="n">ssi_programa_pmi</span><span class="p">,</span>
-                <span class="s2">&quot;dg_opmi&quot;</span><span class="p">:</span><span class="n">ssi_opmi</span><span class="p">,</span>
-                <span class="s2">&quot;dg_uf&quot;</span><span class="p">:</span><span class="n">ssi_uf</span><span class="p">,</span>
-                <span class="s2">&quot;dg_uei&quot;</span><span class="p">:</span><span class="n">ssi_uei</span><span class="p">,</span>
-                <span class="s2">&quot;dg_situcion&quot;</span><span class="p">:</span><span class="n">ssi_situacion</span><span class="p">,</span>
-                <span class="s2">&quot;dg_decreto_emergencia&quot;</span><span class="p">:</span><span class="n">ssi_decreto_emergencia</span><span class="p">,</span>
-                <span class="s2">&quot;dg_cadena_funcional&quot;</span><span class="p">:</span><span class="n">ssi_cadena_funcional</span><span class="p">,</span>
-                <span class="s2">&quot;dg_fecha_viabilidad&quot;</span><span class="p">:</span><span class="n">ssi_viabilidad_aprobacion</span><span class="p">,</span>
-                <span class="s2">&quot;dg_costo_inversion_aprobado&quot;</span><span class="p">:</span><span class="n">ssi_costo_aprobado</span><span class="p">,</span>
-                <span class="s2">&quot;dg_numero_beneficiarios&quot;</span><span class="p">:</span><span class="n">ssi_beneficiarios</span><span class="p">,</span>
-                <span class="s2">&quot;dg_expediente_tecnico&quot;</span><span class="p">:</span><span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
-                <span class="s2">&quot;dg_registro_seguimiento&quot;</span><span class="p">:</span><span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
-                <span class="s2">&quot;dg_inicio_ejecucion&quot;</span><span class="p">:</span><span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
-                <span class="s2">&quot;dg_fin_ejecucion&quot;</span><span class="p">:</span><span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
-                <span class="s2">&quot;dg_inversion_actualizada&quot;</span><span class="p">:</span><span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
-                <span class="s2">&quot;dg_costo_controversias&quot;</span><span class="p">:</span><span class="n">ssi_sol_controversias</span><span class="p">,</span>
-                <span class="s2">&quot;dg_monto_carta_fianza&quot;</span><span class="p">:</span><span class="n">ssi_carta_fianza</span><span class="p">,</span>
-                <span class="s2">&quot;dg_costo_total_actualizado&quot;</span><span class="p">:</span><span class="n">ssi_inv_total</span><span class="p">,</span>
+                <span class="s2">&quot;dg_cui&quot;</span><span class="p">:</span> <span class="n">ssi_cui</span><span class="p">,</span>
+                <span class="s2">&quot;dg_codio_snip&quot;</span><span class="p">:</span> <span class="n">ssi_snip</span><span class="p">,</span>
+                <span class="s2">&quot;dg_fecha_registro&quot;</span><span class="p">:</span> <span class="n">ssi_fecha_registro</span><span class="p">,</span>
+                <span class="s2">&quot;dg_nombre_inversion&quot;</span><span class="p">:</span> <span class="n">ssi_nombre_inversion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_estado_inversion&quot;</span><span class="p">:</span> <span class="n">ssi_estado</span><span class="p">,</span>
+                <span class="s2">&quot;dg_tipo_inversion&quot;</span><span class="p">:</span> <span class="n">ssi_tipo_inversion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_programado_pmi&quot;</span><span class="p">:</span> <span class="n">ssi_programa_pmi</span><span class="p">,</span>
+                <span class="s2">&quot;dg_opmi&quot;</span><span class="p">:</span> <span class="n">ssi_opmi</span><span class="p">,</span>
+                <span class="s2">&quot;dg_uf&quot;</span><span class="p">:</span> <span class="n">ssi_uf</span><span class="p">,</span>
+                <span class="s2">&quot;dg_uei&quot;</span><span class="p">:</span> <span class="n">ssi_uei</span><span class="p">,</span>
+                <span class="s2">&quot;dg_situcion&quot;</span><span class="p">:</span> <span class="n">ssi_situacion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_decreto_emergencia&quot;</span><span class="p">:</span> <span class="n">ssi_decreto_emergencia</span><span class="p">,</span>
+                <span class="s2">&quot;dg_cadena_funcional&quot;</span><span class="p">:</span> <span class="n">ssi_cadena_funcional</span><span class="p">,</span>
+                <span class="s2">&quot;dg_fecha_viabilidad&quot;</span><span class="p">:</span> <span class="n">ssi_viabilidad_aprobacion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_costo_inversion_aprobado&quot;</span><span class="p">:</span> <span class="n">ssi_costo_aprobado</span><span class="p">,</span>
+                <span class="s2">&quot;dg_numero_beneficiarios&quot;</span><span class="p">:</span> <span class="n">ssi_beneficiarios</span><span class="p">,</span>
+                <span class="s2">&quot;dg_expediente_tecnico&quot;</span><span class="p">:</span> <span class="n">ssi_expediente_tecnico</span><span class="p">,</span>
+                <span class="s2">&quot;dg_registro_seguimiento&quot;</span><span class="p">:</span> <span class="n">ssi_reg_seguimiento</span><span class="p">,</span>
+                <span class="s2">&quot;dg_registro_cierre&quot;</span><span class="p">:</span> <span class="n">ssi_registro_cierre</span><span class="p">,</span>
+                <span class="s2">&quot;dg_inicio_ejecucion&quot;</span><span class="p">:</span> <span class="n">ssi_inicio_ejecucion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_fin_ejecucion&quot;</span><span class="p">:</span> <span class="n">ssi_fin_ejecucion</span><span class="p">,</span>
+                <span class="s2">&quot;dg_inversion_actualizada&quot;</span><span class="p">:</span> <span class="n">ssi_inversion_actualizado</span><span class="p">,</span>
+                <span class="s2">&quot;dg_costo_controversias&quot;</span><span class="p">:</span> <span class="n">ssi_sol_controversias</span><span class="p">,</span>
+                <span class="s2">&quot;dg_monto_carta_fianza&quot;</span><span class="p">:</span> <span class="n">ssi_carta_fianza</span><span class="p">,</span>
+                <span class="s2">&quot;dg_costo_total_actualizado&quot;</span><span class="p">:</span> <span class="n">ssi_inv_total</span><span class="p">,</span>
                 <span class="c1"># Ejecución financiera</span>
-                <span class="s2">&quot;fin_costo_total_actualizado&quot;</span><span class="p">:</span><span class="n">ssi_cost_inversion</span><span class="p">,</span>
-                <span class="s2">&quot;fin_devengado_acumulado&quot;</span><span class="p">:</span><span class="n">ssi_devengado_acumulado</span><span class="p">,</span>
-                <span class="s2">&quot;fin_avance_financiero_acumulado&quot;</span><span class="p">:</span><span class="n">ssi_avance_financiero_acum</span><span class="p">,</span>
-                <span class="s2">&quot;fin_saldo_por_ejecutar&quot;</span><span class="p">:</span><span class="n">ssi_saldo</span><span class="p">,</span>
-                <span class="s2">&quot;fin_fecha_primer_devengado&quot;</span><span class="p">:</span><span class="n">ssi_fecha_primerdevengado</span><span class="p">,</span>
-                <span class="s2">&quot;fin_fecha_ultimo_devengado&quot;</span><span class="p">:</span><span class="n">ssi_fecha_ultimodevengado</span><span class="p">,</span>
+                <span class="s2">&quot;fin_costo_total_actualizado&quot;</span><span class="p">:</span> <span class="n">ssi_cost_inversion</span><span class="p">,</span>
+                <span class="s2">&quot;fin_devengado_acumulado&quot;</span><span class="p">:</span> <span class="n">ssi_devengado_acumulado</span><span class="p">,</span>
+                <span class="s2">&quot;fin_avance_financiero_acumulado&quot;</span><span class="p">:</span> <span class="n">ssi_avance_financiero_acum</span><span class="p">,</span>
+                <span class="s2">&quot;fin_saldo_por_ejecutar&quot;</span><span class="p">:</span> <span class="n">ssi_saldo</span><span class="p">,</span>
+                <span class="s2">&quot;fin_fecha_primer_devengado&quot;</span><span class="p">:</span> <span class="n">ssi_fecha_primerdevengado</span><span class="p">,</span>
+                <span class="s2">&quot;fin_fecha_ultimo_devengado&quot;</span><span class="p">:</span> <span class="n">ssi_fecha_ultimodevengado</span><span class="p">,</span>
                 <span class="c1"># Contrataciones</span>
-                <span class="s2">&quot;seaceobra&quot;</span><span class="p">:</span><span class="n">ssi_seaceobra</span><span class="p">,</span>
-                <span class="s2">&quot;seaceconsul&quot;</span><span class="p">:</span><span class="n">ssi_seaceconsul</span><span class="p">,</span>
-                <span class="s2">&quot;seacebien&quot;</span><span class="p">:</span><span class="n">ssi_seacebien</span><span class="p">,</span>
-                <span class="s2">&quot;seaceserv&quot;</span><span class="p">:</span><span class="n">ssi_seaceserv</span><span class="p">,</span>
+                <span class="s2">&quot;seaceobra&quot;</span><span class="p">:</span> <span class="n">ssi_seaceobra</span><span class="p">,</span>
+                <span class="s2">&quot;seaceconsul&quot;</span><span class="p">:</span> <span class="n">ssi_seaceconsul</span><span class="p">,</span>
+                <span class="s2">&quot;seacebien&quot;</span><span class="p">:</span> <span class="n">ssi_seacebien</span><span class="p">,</span>
+                <span class="s2">&quot;seaceserv&quot;</span><span class="p">:</span> <span class="n">ssi_seaceserv</span><span class="p">,</span>
             <span class="p">}</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="n">ssi_mainssi</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span>

@@ -301,6 +301,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.lista_ejecucion.lista_ejecucion_simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScrapingListaEjecucion</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.ssi.main_ssi</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScrapingMainSSI</span>
 
+
 <div class="viewcode-block" id="SSI">
 <a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI">[documentos]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SSI</span><span class="p">(</span><span class="n">ScrapingEight</span><span class="p">,</span> <span class="n">ScrapingListaEjecucion</span><span class="p">,</span> <span class="n">ScrapingMainSSI</span><span class="p">):</span>
@@ -312,28 +313,29 @@
 <span class="sd">        ScrapingListaEjecucion (string): tiene los atributos file_read, num_range, path_export, file_type, year.</span>
 <span class="sd">        ScrapingMainSSI (string): tiene los atributos file_read, num_range, path_export, file_type, year.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
         <span class="n">ScrapingEight</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
-        <span class="n">ScrapingListaEjecucion</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
-        <span class="n">ScrapingMainSSI</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+        <span class="n">ScrapingListaEjecucion</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span>
+        <span class="p">)</span>
+        <span class="n">ScrapingMainSSI</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span>
+        <span class="p">)</span>
 
 <div class="viewcode-block" id="SSI.format_eight">
 <a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI.format_eight">[documentos]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">format_eight</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_eight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Método que descarga los datos de la sección Formato 8 del SSI.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            xlsx: Un archivo xlsx con lso datos almancenados del formato 8</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ScrapingEight</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
-            <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
 
-    
+
 <div class="viewcode-block" id="SSI.list_ejecucion">
 <a class="viewcode-back" href="../../sisedeinversiones.main.html#sisedeinversiones.main.SSI.list_ejecucion">[documentos]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list_ejecucion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -343,12 +345,8 @@
 <span class="sd">            xlsx: Genera un archivo xlsx con los datos almacenados de la lista</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ScrapingListaEjecucion</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
-            <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="SSI.main_ssi">
@@ -360,15 +358,10 @@
 <span class="sd">            xlsx: Genera un archivc xlsx con los datos almacenados de la sección principal</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ScrapingMainSSI</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
-            <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">download_data</span><span class="p">()</span></div>
 </div>
 
-    
 </pre></div>
 
                 </article>

@@ -296,14 +296,14 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.read_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReadsFiles</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">rpa</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">r</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.read_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReadsFiles</span>
 
 
 <div class="viewcode-block" id="ScrapingListaEjecucion">
 <a class="viewcode-back" href="../../../sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.html#sisedeinversiones.lista_ejecucion.lista_ejecucion_simple.ScrapingListaEjecucion">[documentos]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ScrapingListaEjecucion</span><span class="p">(</span><span class="n">ReadsFiles</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_</span>
 
 <span class="sd">    Args:</span>
@@ -313,9 +313,9 @@
 <span class="sd">        file_type (str): Aqui indicamos el tipo de archivo que se quiere descargar. De momento solo se tiene habilitado el formato .xlsx para exportar la información.</span>
 <span class="sd">        year (str): Indicamos el año de los registros que se estan trabajando.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="p">,</span> <span class="n">path_export</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-        <span class="n">ReadsFiles</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span> <span class="o">=</span> <span class="n">file_read</span><span class="p">,</span> 
-                         <span class="n">num_range</span> <span class="o">=</span> <span class="n">num_range</span><span class="p">)</span>
+        <span class="n">ReadsFiles</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_read</span><span class="o">=</span><span class="n">file_read</span><span class="p">,</span> <span class="n">num_range</span><span class="o">=</span><span class="n">num_range</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">path_export</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">path_export</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">file_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">year</span>
@@ -329,7 +329,6 @@
 <span class="sd">            list: Lista de los CUI&#39;s que se trabajaran</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ReadsFiles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_read</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span><span class="p">)</span><span class="o">.</span><span class="n">read_file_csv</span><span class="p">()</span></div>
-
 
 
 <div class="viewcode-block" id="ScrapingListaEjecucion.scrape_info">
@@ -348,16 +347,16 @@
         <span class="c1"># ---------------------------------------------------------------------</span>
 
         <span class="c1"># Datos generales</span>
-        <span class="n">ssi_cui</span>                      <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_pip</span>                      <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_monto_inversion</span>          <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_monto_actualizado</span>        <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_cui</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_pip</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_monto_inversion</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_monto_actualizado</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># Lista de modificaciones en Fase de Ejecución</span>
         <span class="n">ssi_fecha_ultimamodificacion</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_comentarios</span>              <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_usuario</span>                  <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_tipo_documento</span>           <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">ssi_historico</span>                <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_comentarios</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_usuario</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_tipo_documento</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ssi_historico</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># --------------------------------</span>
         <span class="c1"># ---- Comenzamos el scraping ----</span>
@@ -382,20 +381,40 @@
                 <span class="sa">f</span><span class="s2">&quot;Se esta trabajando el regtistro </span><span class="si">{</span><span class="n">one_cui</span><span class="si">}</span><span class="s2"> con el CUI </span><span class="si">{</span><span class="n">lista_cui</span><span class="p">[</span><span class="n">one_cui</span><span class="p">]</span><span class="si">}</span><span class="s2"> y el elemento existe </span><span class="si">{</span><span class="n">element_exist</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
             <span class="c1"># Datos generales del proyecto o inversión</span>
-            <span class="n">cui</span>                      <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[2]/div[2]&#39;</span><span class="p">)</span>
-            <span class="n">pip</span>                      <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[3]/div[2]&#39;</span><span class="p">)</span>
-            <span class="n">monto_inversion</span>          <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[4]/div[2]&#39;</span><span class="p">)</span>
-            <span class="n">monto_actualizado</span>        <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[5]/div[2]&#39;</span><span class="p">)</span>
+            <span class="n">cui</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[2]/div[2]&#39;</span>
+            <span class="p">)</span>
+            <span class="n">pip</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[3]/div[2]&#39;</span>
+            <span class="p">)</span>
+            <span class="n">monto_inversion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[4]/div[2]&#39;</span>
+            <span class="p">)</span>
+            <span class="n">monto_actualizado</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[1]/div[5]/div[2]&#39;</span>
+            <span class="p">)</span>
             <span class="c1"># Lista de modificaciones en Fase de Ejecución</span>
 
-            <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">present</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">present</span><span class="p">(</span>
+                <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody&#39;</span>
+            <span class="p">):</span>
                 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">fecha_ultimamodificacion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[1]&#39;</span><span class="p">)</span>
-                <span class="n">comentarios</span>              <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[3]&#39;</span><span class="p">)</span>
-                <span class="n">usuario</span>                  <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[4]&#39;</span><span class="p">)</span>
-                <span class="n">tipo_documento</span>           <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[5]&#39;</span><span class="p">)</span>
-                <span class="n">historico</span>                <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[6]&#39;</span><span class="p">)</span>
-                
+                <span class="n">fecha_ultimamodificacion</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[1]&#39;</span>
+                <span class="p">)</span>
+                <span class="n">comentarios</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[3]&#39;</span>
+                <span class="p">)</span>
+                <span class="n">usuario</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[4]&#39;</span>
+                <span class="p">)</span>
+                <span class="n">tipo_documento</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[5]&#39;</span>
+                <span class="p">)</span>
+                <span class="n">historico</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+                    <span class="s1">&#39;//*[@id=&quot;main-container&quot;]/div[1]/div/div/div/div/div[2]/table/tbody/tr/td[6]&#39;</span>
+                <span class="p">)</span>
+
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">fecha_ultimamodificacion</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
                 <span class="n">comentarios</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
@@ -412,7 +431,7 @@
             <span class="n">ssi_usuario</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">usuario</span><span class="p">)</span>
             <span class="n">ssi_tipo_documento</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tipo_documento</span><span class="p">)</span>
             <span class="n">ssi_historico</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">historico</span><span class="p">)</span>
-        
+
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">r</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -436,7 +455,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Aqui exportamos la información reunida con el metodo scrape_info()</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            xlsx: Se recibe la tupla que luego se exporta en formato .xslx </span>
+<span class="sd">            xlsx: Se recibe la tupla que luego se exporta en formato .xslx</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span>
             <span class="n">ssi_cui</span><span class="p">,</span>

@@ -291,14 +291,12 @@
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">*Class ReadsFiles*</span>
 <span class="sd">==================</span>
-
 <span class="sd">Este método es usado de manera transversal, puesto que se encarga de leer los archivos .csv o .xlsx </span>
 <span class="sd">que extrae la información de los CUI&#39;s almacenados en ellos. Esto es necesario porque se requiere</span>
 <span class="sd">dichos CUI&#39;s para realizar las consultas a las secciones del portal SSI.</span>
-
 <span class="sd">&quot;&quot;&quot;</span>
-
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
 
 <div class="viewcode-block" id="ReadsFiles">
 <a class="viewcode-back" href="../../../sisedeinversiones.utils.read_utils.html#sisedeinversiones.utils.read_utils.ReadsFiles">[documentos]</a>
@@ -308,7 +306,7 @@
 
 <span class="sd">        Args:</span>
 <span class="sd">            file_read (str): Es la dirección del archvio a leer que puede ser .csv o .xlsx</span>
-<span class="sd">            num_range (str): Aqui indicamos el rango de registros que se tiene que trabajar, bajo el formato &quot;[num_inicio]_[num_fin]&quot;, se debe mantener la forma de separar con un guión bajo.           </span>
+<span class="sd">            num_range (str): Aqui indicamos el rango de registros que se tiene que trabajar, bajo el formato &quot;[num_inicio]_[num_fin]&quot;, se debe mantener la forma de separar con un guión bajo.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_read</span> <span class="o">=</span> <span class="n">file_read</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_range</span> <span class="o">=</span> <span class="n">num_range</span>
@@ -328,7 +326,7 @@
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El total de CUIs a scrapear es: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">list_cui</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">list_cui</span></div>
 
-    
+
 <div class="viewcode-block" id="ReadsFiles.read_file_xlsx">
 <a class="viewcode-back" href="../../../sisedeinversiones.utils.read_utils.html#sisedeinversiones.utils.read_utils.ReadsFiles.read_file_xlsx">[documentos]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">read_file_xlsx</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
