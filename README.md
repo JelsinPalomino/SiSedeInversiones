@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Acerca del proyecto
 
-![image](images\logo.jpg)
+![image](images/logo.jpg)
 
 **SiSedeInversiones**, es un paquete de python diseñada para automatizar la tarea de extraer información de los proyectos de inversión pública de Perú que se encuentran en el "Sistema de Seguimiento de Inversiones (SSI)".
 <br>
@@ -168,9 +168,7 @@ El paquete recibe un archivo .csv en el atributo *file_read*, este archivo debe 
 | 2149746    | ...   | ...   |
 | ...            
 
-```nota
-Es necesario que dentro del archivo .csv la columna que tenga la lista de los CUI's sea llamada "cui" en minuscula. El paquete esta diseñado para ubicar dicha columna de un archivo .csv
-```
+**Nota:**Es necesario que dentro del archivo .csv la columna que tenga la lista de los CUI's sea llamada "cui" en minuscula. El paquete esta diseñado para ubicar dicha columna de un archivo .csv.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
