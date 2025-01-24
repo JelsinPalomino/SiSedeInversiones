@@ -168,7 +168,7 @@ El paquete recibe un archivo .csv en el atributo *file_read*, este archivo debe 
 | 2149746    | ...   | ...   |
 | ...            
 
-**Nota:**Es necesario que dentro del archivo .csv la columna que tenga la lista de los CUI's sea llamada "cui" en minuscula. El paquete esta diseñado para ubicar dicha columna de un archivo .csv.
+**Nota:** Es necesario que dentro del archivo .csv la columna que tenga la lista de los CUI's sea llamada "cui" en minuscula. El paquete esta diseñado para ubicar dicha columna de un archivo .csv.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,7 +222,7 @@ _El metodo main_ssi() se dedica a la extracción de la información que se encue
 scraper.main_ssi()
 ```
 
-![image](images\usos\ssi.png)
+![image](images/usos/ssi.png)
 
 _Con el metodo format_eight() extraemos información del "Formato N°08-A Registros en la Fase de Ejecución"_
 ```python
@@ -231,7 +231,7 @@ _Con el metodo format_eight() extraemos información del "Formato N°08-A Regist
 scraper.format_eight()
 ```
 
-![image](images\usos\form8.jpg)
+![image](images/usos/form8.jpg)
 
 _El metodo list_ejecución() se dedica a descargar información de la página "Lista de ejecución simple pública"_
 
@@ -240,7 +240,7 @@ _El metodo list_ejecución() se dedica a descargar información de la página "L
 
 scraper.list_ejecucion()
 ```
-![image](images\usos\listaEjecucionSimple.jpg)
+![image](images/usos/listaEjecucionSimple.jpg)
 
 
 - Por lo tanto, el código completo para ejecutar el paquete es el siguiente:
