@@ -1,7 +1,7 @@
 """
 *Class ReadsFiles*
 ==================
-Este método es usado de manera transversal, puesto que se encarga de leer los archivos .csv o .xlsx 
+Este método es usado de manera transversal, puesto que se encarga de leer los archivos .csv o .xlsx
 que extrae la información de los CUI's almacenados en ellos. Esto es necesario porque se requiere
 dichos CUI's para realizar las consultas a las secciones del portal SSI.
 """
