@@ -22,7 +22,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -37,7 +37,7 @@
 <h3 align="center">SiSedeInversiones</h3>
 
   <p align="center">
-    Este paquete está dedicado a automatizar la extracción de datos que se encuentran en el portal “Sistema de Seguimiento de Inversiones – SSI” del Estado peruano, donde se pueden monitorear los proyectos de inversión pública en el Perú a través de los Códigos Únicos de Inversión (CUI).
+    Este paquete está dedicado a automatizar la recolección de datos que se encuentran en el portal “Sistema de Seguimiento de Inversiones – SSI” del Estado peruano, donde se pueden monitorear los proyectos de inversión pública en el Perú a través de los Códigos Únicos de Inversión (CUI).
     <br />
     <a href="https://github.com/JelsinPalomino/SiSedeInversiones"><strong>Ir a la Documentación »</strong></a>
     <br />
@@ -85,22 +85,22 @@
 
 ![image](images/logo.jpg)
 
-**SiSedeInversiones**, es un paquete de python diseñada para automatizar la tarea de extraer información de los proyectos de inversión pública de Perú que se encuentran en el "Sistema de Seguimiento de Inversiones (SSI)".
+**SiSedeInversiones**, es un paquete de python diseñada para automatizar la tarea de recolectar información de los proyectos de inversión pública de Perú que se encuentran en el "Sistema de Seguimiento de Inversiones (SSI)".
 <br>
 <br>
-SiSedeInversiones hace uso de los Códigos Únicos de Inversiones (CUI) de los proyectos de inversión para realizar la consulta en el portal del SSI, de donde extrae la información sobre los 
+SiSedeInversiones hace uso de los Códigos Únicos de Inversiones (CUI) de los proyectos de inversión para realizar la consulta en el portal del SSI, de donde extrae la información sobre los:
 
 * Datos generales
 * Información financiera
 * Contratos
 * InfObras
 
-Asimismo, también puede extraer la información de los proyectos que se encuentran en el:
+Asimismo, también puede recolectar la información de los proyectos, que se encuentran en el:
 
 * Formato N°08-A Registros en la Fase de Ejecución <a href="https://ofi5.mef.gob.pe/invierte/ejecucion/verFichaEjecucion/2562741">Ejemplo</a>
 * La lista de ejecución simple pública. <a href="https://ofi5.mef.gob.pe/invierte/ejecucion/traeListaEjecucionSimplePublica/2562741">Ejemplo</a>
 
-En ese sentido, **SiSedeInversiones** luego de realizar las consultas automáticas e identificar la información a descargar generará un archivo .xlsx que reunira los datos relacionados al proyecto consultado usando su CUI. 
+En ese sentido, **SiSedeInversiones** luego de realizar las consultas automáticas e identificar la información a recolectar generará un archivo .xlsx que reunira los datos relacionados al proyecto consultado usando su CUI. 
 <br>
 <br>
 
@@ -304,7 +304,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 
 <!-- CONTRIBUTING -->
-## Contribuyendo
+<!-- ## Contribuyendo
 
 Las contribuciones son lo que hace que la comunidad de código abierto sea un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas será **muy apreciada**.
 
@@ -317,7 +317,7 @@ Si tienes alguna sugerencia que pueda mejorar esto, haz un fork del repositorio 
 4. Push tu Branch a la rama main (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request (PR)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ### Principales colaboradores:
 
@@ -358,32 +358,16 @@ Enlace del proyecto: [https://github.com/JelsinPalomino/SiSedeInversiones](https
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[contributors-shield]: https://img.shields.io/github/contributors/JelsinPalomino/SiSedeInversiones
+[contributors-url]: https://github.com/JelsinPalomino/SiSedeInversiones/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/JelsinPalomino/SiSedeInversiones
+[forks-url]: https://github.com/JelsinPalomino/SiSedeInversiones/network/members
+[stars-shield]: https://img.shields.io/github/stars/JelsinPalomino/SiSedeInversiones
+[stars-url]: https://github.com/JelsinPalomino/SiSedeInversiones/stargazers
+[issues-shield]: https://img.shields.io/github/issues/JelsinPalomino/SiSedeInversiones
+[issues-url]: https://github.com/JelsinPalomino/SiSedeInversiones/issues
+[license-shield]: https://img.shields.io/badge/License-MIT-blue
+[license-url]: https://github.com/JelsinPalomino/SiSedeInversiones/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/LINKEDIN-gray
+[linkedin-url]: https://www.linkedin.com/in/jstpalomino/
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
