@@ -1,23 +1,8 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+<!-- *** https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -30,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/JelsinPalomino/SiSedeInversiones">
     <img src="images/logo4.png" alt="Logo" width="80" height="80" style="border-radius: 10px;">
   </a>
 
@@ -358,16 +343,16 @@ Enlace del proyecto: [https://github.com/JelsinPalomino/SiSedeInversiones](https
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/JelsinPalomino/SiSedeInversiones
+[contributors-shield]: https://img.shields.io/github/contributors/JelsinPalomino/SiSedeInversiones?style=for-the-badge
 [contributors-url]: https://github.com/JelsinPalomino/SiSedeInversiones/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/JelsinPalomino/SiSedeInversiones
+[forks-shield]: https://img.shields.io/github/forks/JelsinPalomino/SiSedeInversiones?style=for-the-badge
 [forks-url]: https://github.com/JelsinPalomino/SiSedeInversiones/network/members
-[stars-shield]: https://img.shields.io/github/stars/JelsinPalomino/SiSedeInversiones
+[stars-shield]: https://img.shields.io/github/stars/JelsinPalomino/SiSedeInversiones?style=for-the-badge
 [stars-url]: https://github.com/JelsinPalomino/SiSedeInversiones/stargazers
-[issues-shield]: https://img.shields.io/github/issues/JelsinPalomino/SiSedeInversiones
+[issues-shield]: https://img.shields.io/github/issues/JelsinPalomino/SiSedeInversiones?style=for-the-badge
 [issues-url]: https://github.com/JelsinPalomino/SiSedeInversiones/issues
-[license-shield]: https://img.shields.io/badge/License-MIT-blue
+[license-shield]: https://img.shields.io/badge/License-MIT-blue?style=for-the-badge
 [license-url]: https://github.com/JelsinPalomino/SiSedeInversiones/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/LINKEDIN-gray
+[linkedin-shield]: https://img.shields.io/badge/LINKEDIN-gray?style=for-the-badge
 [linkedin-url]: https://www.linkedin.com/in/jstpalomino/
 [product-screenshot]: images/screenshot.png
