@@ -9,8 +9,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
+[![Build-sphinx-docs][Build-sphinx-docs-shield]][Build-sphinx-docs-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -343,16 +342,18 @@ Enlace del proyecto: [https://github.com/JelsinPalomino/SiSedeInversiones](https
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/JelsinPalomino/SiSedeInversiones?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/JelsinPalomino/SiSedeInversiones
 [contributors-url]: https://github.com/JelsinPalomino/SiSedeInversiones/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/JelsinPalomino/SiSedeInversiones?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/JelsinPalomino/SiSedeInversiones
 [forks-url]: https://github.com/JelsinPalomino/SiSedeInversiones/network/members
-[stars-shield]: https://img.shields.io/github/stars/JelsinPalomino/SiSedeInversiones?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/JelsinPalomino/SiSedeInversiones
 [stars-url]: https://github.com/JelsinPalomino/SiSedeInversiones/stargazers
-[issues-shield]: https://img.shields.io/github/issues/JelsinPalomino/SiSedeInversiones?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/JelsinPalomino/SiSedeInversiones
 [issues-url]: https://github.com/JelsinPalomino/SiSedeInversiones/issues
-[license-shield]: https://img.shields.io/badge/License-MIT-blue?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/License-MIT-blue
 [license-url]: https://github.com/JelsinPalomino/SiSedeInversiones/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/LINKEDIN-gray?style=for-the-badge
+[linkedin-shield]: https://img.shields.io/badge/LINKEDIN-gray
 [linkedin-url]: https://www.linkedin.com/in/jstpalomino/
 [product-screenshot]: images/screenshot.png
+[Build-sphinx-docs-shield]:https://github.com/JelsinPalomino/SiSedeInversiones/actions/workflows/sphinx-docs.yaml/badge.svg
+[Build-sphinx-docs-url]:https://github.com/JelsinPalomino/SiSedeInversiones/actions/workflows/sphinx-docs.yaml
