@@ -6,11 +6,12 @@ import setuptools
 HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
-README = (HERE / "README.md").read_text()
+with open(HERE / "README.md", encoding="utf-8") as f:
+    README = f.read()
 
 setuptools.setup(
     name="SiSedeInversiones",
-    version="0.0.1",
+    version="1.0.0",
     author="Jelsin Stalin Palomino Huaytapuma",
     author_email="jstpalomino@hotmail.com",
     description="This package is dedicated to automating the extraction of data found in the Peruvian state's Investment Monitoring System - SSI portal, where public investment projects in Peru can be monitored through Unique Investment Codes (CUI).",
@@ -25,5 +26,5 @@ setuptools.setup(
         "Intended Audience :: Education",
     ],
     install_requires=["pandas", "rpa", "openpyxl"],
-    keywords=["web-scraping", "Peru", "rpa", "SSI"],
+    keywords=["web-scraping", "Peru", "rpa", "SSI", "Inversiones"],
 )
