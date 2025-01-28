@@ -23,7 +23,7 @@
   <p align="center">
     Este paquete está dedicado a automatizar la recolección de datos que se encuentran en el portal “Sistema de Seguimiento de Inversiones – SSI” del Estado peruano, donde se pueden monitorear los proyectos de inversión pública en el Perú a través de los Códigos Únicos de Inversión (CUI).
     <br />
-    <a href="https://github.com/JelsinPalomino/SiSedeInversiones"><strong>Ir a la Documentación »</strong></a>
+    <a href="https://jelsinpalomino.github.io/SiSedeInversiones/"><strong>Ir a la Documentación »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
@@ -267,7 +267,7 @@ scraper.list_ejecucion()
 <br>
 En ese caso, se debe dar click a la consola que controla el navegador y alli se debe presionar los siguientes teclados "crtl+C" dos veces y se cerrara esa consola. Luego recien se debe cerrar el navegador que estaba controlando.
 
-_Para más ejemplos, por favor revise la [Documentación](https://example.com)_
+_Para más ejemplos, por favor revise la [Documentación](https://jelsinpalomino.github.io/SiSedeInversiones/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
