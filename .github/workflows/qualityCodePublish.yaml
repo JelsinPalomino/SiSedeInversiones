@@ -1,4 +1,4 @@
-name: Build
+name: Test-Linters-Publish
 
 on:
   workflow_dispatch:
