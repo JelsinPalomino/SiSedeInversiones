@@ -1,8 +1,8 @@
 from sisedeinversiones.lista_ejecucion.lista_ejecucion_simple import \
     ScrapingListaEjecucion
 
-file_read = "E:/otrosTrabajosSTATA-practicas/proyectStataPythonToGitHub/scrapingFunctions/SiSedeInversiones/CUI_2019_dep7.csv"
-path_export = "E:/otrosTrabajosSTATA-practicas/proyectStataPythonToGitHub/pruebas"
+file_read = "tests/test_CUI_2019_dep7.csv"
+path_export = "tests"
 num_range = "5_10"
 file_type = ".xlsx"
 year = "2019"
