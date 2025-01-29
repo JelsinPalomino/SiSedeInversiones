@@ -3,13 +3,16 @@
 
 <!-- PROJECT SHIELDS -->
 <!-- *** https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[![Contributors][contributors-shield]][contributors-url]
+
+[![Build-sphinx-docs][Build-sphinx-docs-shield]][Build-sphinx-docs-url]
+[![Test-Linters-Publish][Test-Linters-Publish-shield]][Test-Linters-Publish-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![Contributors][contributors-shield]][contributors-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Build-sphinx-docs][Build-sphinx-docs-shield]][Build-sphinx-docs-url]
+
 
 <!-- PROJECT LOGO -->
 <br />
@@ -357,3 +360,5 @@ Enlace del proyecto: [https://github.com/JelsinPalomino/SiSedeInversiones](https
 [product-screenshot]: images/screenshot.png
 [Build-sphinx-docs-shield]:https://github.com/JelsinPalomino/SiSedeInversiones/actions/workflows/sphinx-docs.yaml/badge.svg
 [Build-sphinx-docs-url]:https://github.com/JelsinPalomino/SiSedeInversiones/actions/workflows/sphinx-docs.yaml
+[Test-Linters-Publish-shield]:https://github.com/JelsinPalomino/SiSedeInversiones/actions/workflows/qualityCodePublish.yaml/badge.svg
+[Test-Linters-Publish-url]:https://github.com/JelsinPalomino/SiSedeInversiones/actions/workflows/qualityCodePublish.yaml
