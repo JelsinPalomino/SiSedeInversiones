@@ -58,8 +58,9 @@ jobs:
         run: |
           echo "Running linters"
           flake8 .
-          isort --check-only . 2>&1
           black --check . 2>&1
+          isort --check-only . 2>&1
+          
 
       - name: Upload pytest test results
         uses: actions/upload-artifact@master

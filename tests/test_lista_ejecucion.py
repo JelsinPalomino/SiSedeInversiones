@@ -1,5 +1,6 @@
-from sisedeinversiones.lista_ejecucion.lista_ejecucion_simple import \
-    ScrapingListaEjecucion
+from sisedeinversiones.lista_ejecucion.lista_ejecucion_simple import (
+    ScrapingListaEjecucion,
+)
 
 file_read = "tests/test_CUI_2019_dep7.csv"
 path_export = "tests"
