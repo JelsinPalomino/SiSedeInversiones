@@ -12,6 +12,7 @@
 [![MIT License][license-shield]][license-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Download-PyPi][downloads-PyPi-shield]][downloads-PyPi-url]
 
 
 <!-- PROJECT LOGO -->
@@ -345,6 +346,8 @@ Enlace del proyecto: [https://github.com/JelsinPalomino/SiSedeInversiones](https
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[downloads-PyPi-shield]: https://img.shields.io/pypi/dm/sisedeinversiones
+[downloads-PyPi-url]: https://pypistats.org/packages/sisedeinversiones
 [contributors-shield]: https://img.shields.io/github/contributors/JelsinPalomino/SiSedeInversiones
 [contributors-url]: https://github.com/JelsinPalomino/SiSedeInversiones/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/JelsinPalomino/SiSedeInversiones
