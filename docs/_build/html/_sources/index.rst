@@ -12,7 +12,7 @@ Sistema de Seguimiento de Inversiones (SSI) del Estado peruano,
 donde se pueden monitorear los proyectos de inversión pública en el 
 Perú a través de los Códigos Únicos de Inversión (CUI).
 
-.. [#] https://pypi.org
+.. [#] Es una libreria que también se puede encontrar en `"Python Package Index (PyPi)" <https://pypi.org>`_ 
 
 .. note:: 
    Este proyecto está en desarrollo activo..
@@ -21,7 +21,7 @@ Perú a través de los Códigos Únicos de Inversión (CUI).
 Este paquete esta alojado en la "Indexadora de paquetes de Python - Pypi" que es un repositorio 
 de software para el lenguaje de programación Python [#]_. 
 
-.. [#] https://pypi.org
+.. [#] https://pypi.org/project/SiSedeInversiones/1.0.0/
 
 ¿Que es el Sistema de Seguimiento de Inversiones (SSI)?
 -------------------------------------------------------
