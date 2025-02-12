@@ -1,13 +1,13 @@
-sisedeinversiones.form\_eight package
-=====================================
+3.1. form\_eight
+================
 
 .. automodule:: sisedeinversiones.form_eight
    :members:
    :undoc-members:
    :show-inheritance:
 
-Submodules
-----------
+Clase
+-----
 
 .. toctree::
    :maxdepth: 4

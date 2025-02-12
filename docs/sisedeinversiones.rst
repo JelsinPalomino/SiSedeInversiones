@@ -1,13 +1,13 @@
-sisedeinversiones package
-=========================
+Biblioteca SiSedeInversiones
+============================
 
 .. automodule:: sisedeinversiones
    :members:
    :undoc-members:
    :show-inheritance:
 
-Subpackages
------------
+3.- Funcionalidades (Desagregado)
+---------------------------------
 
 .. toctree::
    :maxdepth: 4
@@ -17,8 +17,8 @@ Subpackages
    sisedeinversiones.ssi
    sisedeinversiones.utils
 
-Submodules
-----------
+4.- Funcionalidades (Principal)
+-------------------------------
 
 .. toctree::
    :maxdepth: 4

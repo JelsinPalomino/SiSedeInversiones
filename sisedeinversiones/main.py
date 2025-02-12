@@ -1,6 +1,6 @@
 """
-Clases SSI
-==========
+4.1. Clases principal de la biblioteca `SSI`
+============================================
 
 En esta sección, se construye una clase general que hereda los métodos de las clases específicas
 para cada sección del portal (Formato8, lista de ejecución y el SSI).
