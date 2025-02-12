@@ -1,13 +1,13 @@
-sisedeinversiones.ssi package
-=============================
+3.3. Main ssi 
+=============
 
 .. automodule:: sisedeinversiones.ssi
    :members:
    :undoc-members:
    :show-inheritance:
 
-Submodules
-----------
+Clase
+-----
 
 .. toctree::
    :maxdepth: 4

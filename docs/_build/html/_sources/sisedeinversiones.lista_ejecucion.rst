@@ -1,13 +1,13 @@
-sisedeinversiones.lista\_ejecucion package
-==========================================
+3.2. lista\_ejecucion
+=====================
 
 .. automodule:: sisedeinversiones.lista_ejecucion
    :members:
    :undoc-members:
    :show-inheritance:
 
-Submodules
-----------
+Clase
+-----
 
 .. toctree::
    :maxdepth: 4

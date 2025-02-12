@@ -1,13 +1,13 @@
-sisedeinversiones.utils package
-===============================
+3.4. Complementos "utils"
+=========================
 
 .. automodule:: sisedeinversiones.utils
    :members:
    :undoc-members:
    :show-inheritance:
 
-Submodules
-----------
+Clase
+-----
 
 .. toctree::
    :maxdepth: 4
