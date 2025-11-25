@@ -3,7 +3,7 @@
 
 <!-- PROJECT SHIELDS -->
 <!-- *** https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
+[![DOI](https://zenodo.org/badge/914105036.svg)](https://doi.org/10.5281/zenodo.17714606)
 [![Build-sphinx-docs][Build-sphinx-docs-shield]][Build-sphinx-docs-url]
 [![Test-Linters-Publish][Test-Linters-Publish-shield]][Test-Linters-Publish-url]
 [![Forks][forks-shield]][forks-url]
